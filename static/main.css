@@ -1,9 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src: url('fonts/icomoon.eot?qj4256');
-	src: url('fonts/icomoon.eot?qj4256#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?qj4256') format('truetype'), url('fonts/icomoon.woff?qj4256') format('woff'), url('fonts/icomoon.svg?qj4256#icomoon') format('svg');
+	src: url('fonts/icomoon.eot?ukwgfd');
+	src: url('fonts/icomoon.eot?ukwgfd#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?ukwgfd') format('truetype'), url('fonts/icomoon.woff?ukwgfd') format('woff'), url('fonts/icomoon.svg?ukwgfd#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
+	font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -20,20 +21,40 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-star:before {
-	content: "\e909";
+.icon-theme:before {
+	content: "\e902";
+}
+
+.icon-point-up:before {
+	content: "\e907";
+}
+
+.icon-folder-open:before {
+	content: "\e905";
+}
+
+.icon-point_down:before {
+	content: "\e915";
+}
+
+.icon-like:before {
+	content: "\f087";
 }
 
 .icon-issues:before {
 	content: "\e90c";
 }
 
-.icon-pip:before {
-	content: "\e907";
+.icon-chevrons-right:before {
+	content: "\e900";
 }
 
-.icon-credit-card:before {
-	content: "\e90b";
+.icon-external-link:before {
+	content: "\e901";
+}
+
+.icon-gitlab:before {
+	content: "\e906";
 }
 
 .icon-web:before {
@@ -48,51 +69,12 @@
 	content: "\e914";
 }
 
-.icon-twitter-col:before {
-	content: "\e90a";
-	color: #1da1f2;
-}
-
-.icon-telegram-col:before {
-	content: "\e90f";
-	color: #2ca5e0;
-}
-
-.icon-gitlab-col:before {
-	content: "\e910";
-	color: #e24329;
-}
-
-.icon-activity:before {
-	content: "\e900";
-}
-
-.icon-award:before {
-	content: "\e901";
-}
-
-.icon-donate:before {
-	content: "\e902";
-}
-
-.icon-resume:before {
-	content: "\e90d";
-}
-
 .icon-gift:before {
 	content: "\e903";
 }
 
 .icon-github:before {
 	content: "\e904";
-}
-
-.icon-heart:before {
-	content: "\e905";
-}
-
-.icon-home:before {
-	content: "\e906";
 }
 
 .icon-twitter:before {
@@ -103,44 +85,12 @@
 	content: "\e911";
 }
 
-.icon-menu:before {
-	content: "\f0c9";
-}
-
-.icon-mail:before {
-	content: "\f003";
-}
-
-.icon-prof:before {
-	content: "\f007";
-}
-
-.icon-download:before {
-	content: "\f019";
-}
-
-.icon-menu:before {
-	content: "\f0c9";
-}
-
-.icon-mail:before {
-	content: "\f003";
-}
-
-.icon-prof:before {
-	content: "\f007";
-}
-
-.icon-point_down:before {
-	content: "\e915";
-}
-
-.icon-smiley:before {
-	content: "\e90e";
-}
-
 *, ::before, ::after {
 	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
@@ -149,8 +99,8 @@ body {
 	min-height: 100%;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
-	background-color: rgb(10, 25, 47);
-	color: rgb(136, 146, 176);
+	background-color: #161A1A;
+	color: rgb(172, 177, 197);
 	line-height: 1.3;
 	font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
 	font-size: 20px;
@@ -180,7 +130,7 @@ header {
 	align-items: center;
 	position: fixed;
 	top: 0px;
-	background-color: rgb(10, 25, 47);
+	background-color: #161A1A;
 	z-index: 11;
 	width: 100%;
 	height: 100px;
@@ -190,7 +140,6 @@ header {
 	pointer-events: auto !important;
 	user-select: auto !important;
 	padding: 0px 50px;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 nav {
@@ -221,7 +170,6 @@ nav {
 	font-weight: 700;
 	font-size: 18px;
 	letter-spacing: 0px;
-	text-decoration: none;
 }
 
 .brand img {
@@ -236,7 +184,7 @@ nav {
 	align-items: center;
 }
 
-nav ul {
+.nav-wrapper ul {
 	display: flex;
 	-webkit-box-pack: justify;
 	justify-content: space-between;
@@ -247,17 +195,18 @@ nav ul {
 	list-style: none;
 }
 
-nav ul li {
+.nav-wrapper ul li {
 	position: relative;
 	font-size: 13px;
 	counter-increment: item 1;
 	margin: 0px 10px;
+	text-transform: uppercase;
 }
 
-nav ul li::before {
+.nav-wrapper ul li::before {
 	content: "0" counter(item) ".";
 	text-align: right;
-	color: rgb(100, 255, 218);
+	color: rgb(8, 253, 216);
 	font-size: 12px;
 }
 
@@ -269,9 +218,6 @@ nav ul li::before {
 	-webkit-box-align: center;
 	align-items: center;
 	cursor: pointer;
-	transition-timing-function: linear;
-	transition-duration: 0.15s;
-	transition-property: opacity, filter;
 	text-transform: none;
 	color: inherit;
 	background-color: transparent;
@@ -293,33 +239,26 @@ nav ul li::before {
 }
 
 .icon-menu {
-	background-color: rgb(100, 255, 218);
+	background-color: rgb(8, 253, 216);
 	position: absolute;
 	width: 30px;
 	height: 2px;
 	top: 50%;
 	left: 0px;
 	right: 0px;
-	transition-duration: 0.22s;
-	transition-property: transform;
-	transition-delay: 0s;
 	transform: rotate(0deg);
-	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 	border-radius: 3px;
 }
 
 .icon-menu::before, .icon-menu::after {
 	content: "";
 	display: block;
-	background-color: rgb(100, 255, 218);
+	background-color: rgb(8, 253, 216);
 	position: absolute;
 	left: auto;
 	right: 0px;
 	width: 30px;
 	height: 2px;
-	transition-timing-function: ease;
-	transition-duration: 0.15s;
-	transition-property: transform;
 	border-radius: 4px;
 }
 
@@ -327,14 +266,12 @@ nav ul li::before {
 	width: 120%;
 	top: -10px;
 	opacity: 1;
-	transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in 0s;
 }
 
 .icon-menu::after {
 	width: 80%;
 	bottom: -10px;
 	transform: rotate(0deg);
-	transition: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
 }
 
 /* Common Utils */
@@ -353,42 +290,38 @@ a {
 	padding: 12px 10px;
 	display: inline-block;
 	text-decoration-skip-ink: auto;
-	color: inherit;
+	color: #f0f0f0;
 	position: relative;
 	cursor: pointer;
 	text-decoration: none;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 a:hover, a:focus {
-	color: rgb(100, 255, 218);
+	color: rgb(8, 253, 216);
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
-	color: rgb(204, 214, 246);
+	color: rgb(220, 228, 255);
 	margin: 0px 0px 10px;
 }
 
 .btn_outline {
-	color: rgb(100, 255, 218);
+	color: rgb(8, 253, 216);
 	background-color: transparent;
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	line-height: 1;
-	cursor: pointer;
 	margin-left: 10px;
 	font-size: 13px;
 	border-width: 1px;
 	border-style: solid;
-	border-color: rgb(100, 255, 218);
+	border-color: rgb(8, 253, 216);
 	border-image: initial;
 	border-radius: 3px;
 	padding: 0.75rem 1rem;
-	text-decoration: none;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
-.social {
+.social-left {
 	width: 40px;
 	position: fixed;
 	bottom: 0px;
@@ -398,7 +331,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: rgb(168, 178, 209);
 }
 
-.social ul {
+.social-left ul, .social-right ul {
 	display: flex;
 	flex-direction: column;
 	-webkit-box-align: center;
@@ -408,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {
 	list-style: none;
 }
 
-.social ul::after {
+.social-left ul::after, .social-right ul::after {
 	content: "";
 	display: block;
 	width: 1px;
@@ -417,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0px auto;
 }
 
-.mail {
+.social-right {
 	width: 40px;
 	position: fixed;
 	bottom: 0px;
@@ -425,33 +358,6 @@ h1, h2, h3, h4, h5, h6 {
 	right: 40px;
 	z-index: 10;
 	color: rgb(168, 178, 209);
-}
-
-.email {
-	display: flex;
-	flex-direction: column;
-	-webkit-box-align: center;
-	align-items: center;
-	position: relative;
-}
-
-.mail .email a {
-	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
-	font-size: 12px;
-	letter-spacing: 0.1em;
-	-webkit-writing-mode: vertical-rl;
-	writing-mode: vertical-rl;
-	margin: 20px auto;
-	padding: 10px;
-}
-
-.mail .email::after {
-	content: "";
-	display: block;
-	width: 1px;
-	height: 90px;
-	background-color: rgb(168, 178, 209);
-	margin: 0px auto;
 }
 
 /* Main Content */
@@ -486,7 +392,7 @@ main {
 }
 
 .short-intro {
-	color: rgb(100, 255, 218);
+	color: rgb(8, 253, 216);
 	font-size: 16px;
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	font-weight: normal;
@@ -502,7 +408,7 @@ main {
 .intro-description {
 	font-size: 80px;
 	line-height: 1.1;
-	color: rgb(136, 146, 176);
+	color: rgb(155, 166, 200);
 }
 
 .home div {
@@ -526,6 +432,8 @@ main {
 	padding: 1.25rem 1.75rem;
 }
 
+/* About Me */
+
 .about {
 	max-width: 1000px;
 	position: relative;
@@ -534,6 +442,7 @@ main {
 }
 
 .title {
+	color: #f0f0f0;
 	position: relative;
 	display: flex;
 	-webkit-box-align: center;
@@ -551,7 +460,7 @@ main {
 	margin-right: 10px;
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	font-weight: normal;
-	color: rgb(100, 255, 218);
+	color: rgb(8, 253, 216);
 	font-size: 20px;
 	position: relative;
 	bottom: 4px;
@@ -567,8 +476,6 @@ main {
 	top: -5px;
 	margin-left: 20px;
 }
-
-/* About Me */
 
 .about_me_box {
 	display: flex;
@@ -601,35 +508,17 @@ main {
 
 .languages li {
 	position: relative;
-	margin-bottom: 10px;
-	padding-left: 20px;
+	margin-bottom: 15px;
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	font-size: 13px;
-	color: rgb(136, 146, 176);
+	color: rgb(175, 187, 226);
+	cursor: pointer;
 }
 
-.languages li::before {
-	content: "▹";
-	position: absolute;
-	left: 0px;
-	color: rgb(100, 255, 218);
-	font-size: 14px;
-	line-height: 12px;
-}
+/* Articles */
 
-/* Experience */
-
-.experience {
-	position: relative;
-	max-width: 700px;
-	/* margin: 0px auto; */
+.articles {
 	padding: 150px 0px;
-}
-
-.places {
-	display: flex;
-	align-items: flex-start;
-	position: relative;
 }
 
 /* Projects */
@@ -642,7 +531,6 @@ main {
 	-webkit-box-align: center;
 	flex-direction: column;
 	align-items: flex-start;
-	/* margin: 0px auto; */
 	padding: 150px 0px;
 }
 
@@ -673,7 +561,7 @@ main {
 .featured_project {
 	font-size: 13px;
 	font-weight: normal;
-	color: rgb(100, 255, 218);
+	color: rgb(75, 255, 213);
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	margin-top: 10px;
 	padding-top: 0px;
@@ -689,10 +577,9 @@ main {
 	box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
 	position: relative;
 	z-index: 2;
-	background-color: rgb(23, 42, 69);
-	color: rgb(168, 178, 209);
+	background-color: rgba(8, 8, 8, 0.8);
+	color: rgb(186, 197, 229);
 	font-size: 18px;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 	padding: 25px;
 	border-radius: 3px;
 }
@@ -756,14 +643,13 @@ main {
 }
 
 .project_preview {
-	box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
+	box-shadow: rgba(2, 12, 27, 0) 0px 10px 30px -15px;
 	position: relative;
 	z-index: 1;
-	background-color: rgb(100, 255, 218);
+	background-color: rgb(240, 255, 242);
 	grid-column: 6 / -1;
 	grid-row: 1 / -1;
 	border-radius: 4px;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 .project_preview::before {
@@ -778,7 +664,6 @@ main {
 	z-index: 3;
 	background-color: rgb(10, 25, 47);
 	mix-blend-mode: screen;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 .project_img_wrapper {
@@ -801,7 +686,6 @@ main {
 	object-fit: cover;
 	object-position: center center;
 	opacity: 0;
-	transition-delay: 500ms;
 }
 
 .other_projects {
@@ -825,18 +709,15 @@ main {
 	display: inline-block;
 	text-decoration-skip-ink: auto;
 	position: relative;
-	cursor: pointer;
-	color: rgb(100, 255, 218);
+	color: rgb(8, 253, 216);
 	text-align: center;
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	font-size: 14px;
-	text-decoration: none;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 	margin: 0px auto;
 }
 
 .the_archive:hover, .the_archive:focus, .the_archive:active {
-	color: rgb(100, 255, 218);
+	color: rgb(8, 253, 216);
 	outline: 0px;
 }
 
@@ -851,9 +732,8 @@ main {
 	height: 1px;
 	position: relative;
 	bottom: 0.37em;
-	background-color: rgb(100, 255, 218);
+	background-color: rgb(8, 253, 216);
 	opacity: 0.5;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 .the_archive::after {
@@ -873,7 +753,6 @@ main {
 
 .other_project_card {
 	cursor: default;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 .card-inner {
@@ -889,7 +768,6 @@ main {
 	background-color: rgb(23, 42, 69);
 	padding: 2rem 1.75rem;
 	border-radius: 3px;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 .card-header {
@@ -902,7 +780,7 @@ main {
 }
 
 .card-icon-left {
-	color: rgb(100, 255, 218);
+	color: rgb(8, 253, 216);
 }
 
 .card-icon-right {
@@ -947,19 +825,17 @@ main {
 }
 
 .show_more {
-	color: rgb(100, 255, 218);
+	color: rgb(8, 253, 216);
+	cursor: pointer;
 	background-color: transparent;
 	font-size: 13px;
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	line-height: 1;
-	cursor: pointer;
 	border-width: 1px;
 	border-style: solid;
-	border-color: rgb(100, 255, 218);
+	border-color: rgb(8, 253, 216);
 	border-image: initial;
 	border-radius: 3px;
-	text-decoration: none;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 	padding: 1.25rem 1.75rem;
 	margin: 100px auto 0px;
 }
@@ -981,7 +857,7 @@ main {
 	width: 100%;
 	white-space: nowrap;
 	display: block;
-	color: rgb(100, 255, 218);
+	color: rgb(8, 253, 216);
 	font-size: 16px;
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	font-weight: normal;
@@ -996,7 +872,7 @@ main {
 	margin-right: 10px;
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	font-weight: normal;
-	color: rgb(100, 255, 218);
+	color: rgb(8, 253, 216);
 	font-size: 20px;
 	position: relative;
 	bottom: 4px;
@@ -1016,28 +892,22 @@ main {
 	display: inline-block;
 	text-decoration-skip-ink: auto;
 	position: relative;
-	cursor: pointer;
-	color: rgb(100, 255, 218);
-	text-decoration: none;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+	color: rgb(8, 253, 216);
 }
 
 .btn_get_in_touch {
-	color: rgb(100, 255, 218);
+	color: rgb(8, 253, 216);
 	background-color: transparent;
 	font-size: 14px;
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	line-height: 1;
-	cursor: pointer;
 	margin-top: 50px;
 	border-width: 1px;
 	border-style: solid;
-	border-color: rgb(100, 255, 218);
+	border-color: rgb(8, 253, 216);
 	border-image: initial;
 	border-radius: 3px;
 	padding: 1.25rem 1.75rem;
-	text-decoration: none;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 /*  Footer  */
@@ -1049,8 +919,8 @@ footer {
 	-webkit-box-align: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: rgb(2, 12, 27);
-	color: rgb(136, 146, 176);
+	background-color: #0a0909;
+	color: rgb(228, 232, 245);
 	text-align: center;
 	height: auto;
 	min-height: 70px;
@@ -1064,7 +934,7 @@ footer {
 }
 
 .footer_meta a {
-	color: rgb(136, 146, 176);
+	color: rgb(220, 228, 255);
 	padding: 10px;
 }
 
@@ -1130,6 +1000,12 @@ footer {
 @media (max-width: 48em) {
 	main {
 		padding: 0px 50px;
+	}
+}
+
+@media (max-width: 30em) {
+	main {
+		padding: 0px 25px;
 	}
 }
 
@@ -1205,6 +1081,12 @@ footer {
 	}
 }
 
+@media (max-width: 30em) {
+	.intro-name {
+		font-size: 50px;
+	}
+}
+
 @media (max-width: 62.5em) {
 	.intro-description {
 		font-size: 70px;
@@ -1217,16 +1099,22 @@ footer {
 	}
 }
 
+@media (max-width: 30em) {
+	.intro-description {
+		font-size: 50px;
+	}
+}
+
 /* Social */
 
 @media (max-width: 62.5em) {
-	.social {
+	.social-left {
 		right: 25px;
 	}
 }
 
 @media (max-width: 48em) {
-	.social {
+	.social-left {
 		display: none;
 	}
 }
@@ -1234,13 +1122,13 @@ footer {
 /* mail */
 
 @media (max-width: 62.5em) {
-	.mail {
+	.social-right {
 		right: 25px;
 	}
 }
 
 @media (max-width: 48em) {
-	.mail {
+	.social-right {
 		display: none;
 	}
 }
@@ -1292,14 +1180,6 @@ footer {
 @media (max-width: 48em) {
 	.about_me_pic {
 		margin: 60px auto 0px;
-	}
-}
-
-/* Experience Section */
-
-@media (max-width: 48em) {
-	.experience {
-		padding: 100px 0px;
 	}
 }
 
