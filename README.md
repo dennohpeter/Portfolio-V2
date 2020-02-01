@@ -2,7 +2,9 @@
   <img alt="Logo" src="https://raw.githubusercontent.com/dennohpeter/portfolio/master/static/favicon/android-chrome-512x512.png" width="100">
 </div>
 
-# # dennohpeter.com
+<h1 align="center">
+  dennohpeter.com
+ </h1>
 
 <div align="center">
   <a href="https://app.netlify.com/sites/dennohpeter/deploys">
