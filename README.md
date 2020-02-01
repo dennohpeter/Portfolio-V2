@@ -6,7 +6,7 @@
  dennohpeter.com
  </h1>
 <div align="center">
-Built with Html & Css and hosted with <a href="https://www.netlify.com">Netfily.</a>
+<a href="https://dennohpeter.com" target="_blank">dennohpeter.com</a> is built with <strong>Html & Css</strong> and hosted with <a href="https://www.netlify.com">Netfily.</a>
 </div>
 <br>
 <div align="center">
