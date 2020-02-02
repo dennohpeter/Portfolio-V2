@@ -144,6 +144,17 @@ header {
 	pointer-events: auto !important;
 	user-select: auto !important;
 	padding: 0px 50px;
+	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+header.scroll {
+	height: 70px;
+	box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px;
+}
+
+header.scrollAnim {
+	box-shadow: none;
+	transform: translateY(-70px);
 }
 
 .desktop-nav {
@@ -167,7 +178,6 @@ header {
 	-webkit-box-align: center;
 	align-items: center;
 }
-
 
 .brand img {
 	display: block;
@@ -283,7 +293,6 @@ header {
 /* Overflow Btn Mobile */
 
 .icon-menu.active {
-
 	transition-delay: 0.12s;
 	transform: rotate(225deg);
 	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -306,18 +315,18 @@ header {
 /* Navbar Mobile */
 
 .mobile-menu {
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
-    transform: translateX(100vw);
-    visibility: hidden;
-    display: none;
-    outline: 0px;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	width: 100%;
+	height: 100vh;
+	z-index: 10;
+	transform: translateX(100vw);
+	visibility: hidden;
+	display: none;
+	outline: 0px;
+	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 .mobile-menu.active {
@@ -338,7 +347,7 @@ header {
 	-webkit-box-align: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: rgba(25, 32, 32, 0.99);;
+	background-color: rgba(25, 32, 32, 0.99);
 	width: 50vw;
 	height: 100%;
 	position: relative;
