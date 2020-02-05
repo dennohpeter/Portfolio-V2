@@ -1,0 +1,18 @@
+- pk: python
+  name: Python
+- pk: java
+  name: Java
+- pk: android
+  name: Android
+- pk: django
+  name: Django
+- pk: rust
+  name: Rust
+- pk: html
+  name: 'HTML & CSS'
+- pk: statik
+  name: Statik
+- pk: dummy
+  name: dummy
+- pk: cow
+  name: cow
