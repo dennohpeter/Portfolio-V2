@@ -1,0 +1,7 @@
+title: String 
+slug: String
+author: String
+summary: String
+published: DateTime
+tags: Tags[]
+content: Content
