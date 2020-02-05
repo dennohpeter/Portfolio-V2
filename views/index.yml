@@ -1,0 +1,12 @@
+path: /
+template: index
+context:
+  static:
+    page-title: "Dennis Peterson | Full Stack Developer | Linux Nerd"
+  dynamic:
+    home: session.query(Home).all()[0]
+    about: session.query(About).all()[0]
+    # articles: session.query(Articles).all()[0]
+    featured_projects: session.query(Projects).filter(Projects.featured==True).all()
+    other_projects: session.query(Projects).filter(Projects.featured==False).all()
+    contact: session.query(Contact).all()[0]

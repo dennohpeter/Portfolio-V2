@@ -1,0 +1,9 @@
+date: DateTime
+name: String
+github:  String
+external-link: String
+tech: Tags[]
+cover: String
+featured: Boolean
+showInProjects: Boolean
+description: Content

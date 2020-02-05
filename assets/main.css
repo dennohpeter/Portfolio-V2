@@ -579,13 +579,13 @@ main {
 	margin: 0px 0px 20px 3px;
 }
 
-.intro-name {
+.name {
 	font-size: 80px;
 	line-height: 1.1;
 	margin: 0px;
 }
 
-.intro-description {
+.subtitle {
 	font-size: 80px;
 	line-height: 1.1;
 	color: rgb(155, 166, 200);
@@ -674,7 +674,7 @@ main {
 	margin-left: 60px;
 }
 
-.languages {
+.skills {
 	display: grid;
 	grid-template-columns: minmax(140px, 200px) minmax(140px, 200px);
 	overflow: hidden;
@@ -683,7 +683,7 @@ main {
 	list-style: none;
 }
 
-.languages li {
+.skills li {
 	position: relative;
 	margin-bottom: 15px;
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
@@ -765,7 +765,7 @@ main {
 	margin: 0px;
 }
 
-.lang_used {
+.tech_list {
 	position: relative;
 	z-index: 2;
 	display: flex;
@@ -775,17 +775,17 @@ main {
 	list-style: none;
 }
 
-.featured_card:nth-of-type(2n+1) .lang_used {
+.featured_card:nth-of-type(2n+1) .tech_list {
 	-webkit-box-pack: end;
 	justify-content: flex-end;
 }
 
-.featured_card:nth-of-type(2n+1) .lang_used li {
+.featured_card:nth-of-type(2n+1) .tech_list li {
 	margin-left: 20px;
 	margin-right: 0px;
 }
 
-.lang_used li {
+.tech_list li {
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	font-size: 13px;
 	color: rgb(136, 146, 176);
@@ -815,11 +815,11 @@ main {
 	padding: 10px;
 }
 
-.featured_card:nth-of-type(2n+1) .project_preview {
+.featured_card:nth-of-type(2n+1) .project_cover {
 	grid-column: 1 / 8;
 }
 
-.project_preview {
+.project_cover {
 	box-shadow: rgba(2, 12, 27, 0) 0px 10px 30px -15px;
 	position: relative;
 	z-index: 1;
@@ -829,7 +829,7 @@ main {
 	border-radius: 4px;
 }
 
-.project_preview::before {
+.project_cover::before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -982,23 +982,21 @@ main {
 	color: rgb(168, 178, 209);
 }
 
-.other_langs_used {
-	display: flex;
+.other_project_card .card-inner .tech_list {
+	/* position: relative; */
+	/* z-index: 2; */
 	align-items: flex-end;
 	-webkit-box-flex: 1;
 	flex-grow: 1;
-	flex-wrap: wrap;
-	padding: 0px;
 	margin: 20px 0px 0px;
-	list-style: none;
 }
 
-.other_langs_used li {
-	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+.other_project_card .card-inner .tech_list li {
 	font-size: 12px;
-	color: rgb(136, 146, 176);
 	line-height: 1.75;
 	margin-right: 15px;
+	/* margin-bottom: 7px; */
+	/* white-space: nowrap; */
 }
 
 .show_more {
@@ -1247,37 +1245,37 @@ footer {
 }
 
 @media (max-width: 62.5em) {
-	.intro-name {
+	.name {
 		font-size: 70px;
 	}
 }
 
 @media (max-width: 48em) {
-	.intro-name {
+	.name {
 		font-size: 60px;
 	}
 }
 
 @media (max-width: 30em) {
-	.intro-name {
+	.name {
 		font-size: 50px;
 	}
 }
 
 @media (max-width: 62.5em) {
-	.intro-description {
+	.subtitle {
 		font-size: 70px;
 	}
 }
 
 @media (max-width: 48em) {
-	.intro-description {
+	.subtitle {
 		font-size: 60px;
 	}
 }
 
 @media (max-width: 30em) {
-	.intro-description {
+	.subtitle {
 		font-size: 50px;
 	}
 }
@@ -1360,7 +1358,7 @@ footer {
 	}
 }
 
-/* Projects Section */
+/* Featured Projects Section */
 
 @media (max-width: 48em) {
 	.projects {
@@ -1389,33 +1387,33 @@ footer {
 }
 
 @media (max-width: 37.5em) {
-	.lang_used li {
+	.featured_description .tech_list li {
 		color: rgb(204, 214, 246);
 		margin-right: 10px;
 	}
 }
 
 @media (max-width: 48em) {
-	.featured_card:nth-of-type(2n+1) .project_preview {
+	.featured_card:nth-of-type(2n+1) .project_cover {
 		height: 100%;
 	}
 }
 
 @media (max-width: 37.5em) {
-	.featured_card:nth-of-type(2n+1) .project_preview {
+	.featured_card:nth-of-type(2n+1) .project_cover {
 		opacity: 0.25;
 		grid-column: 1 / -1;
 	}
 }
 
 @media (max-width: 48em) {
-	.project_preview {
+	.project_cover {
 		height: 100%;
 	}
 }
 
 @media (max-width: 37.5em) {
-	.project_preview {
+	.project_cover {
 		opacity: 0.25;
 		grid-column: 1 / -1;
 	}

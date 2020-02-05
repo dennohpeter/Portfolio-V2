@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% block body %}
+<main class="fillHeight">
+	<section class="home">
+		<h1 class="short-intro">{{ home.title }}</h1>
+		<h2 class="name">{{ home.name }}</h2>
+		<h3 class="subtitle"> {{ home.subtitle }}</h3>
+		<div class="description">
+			{{ home.content|safe }}
+		</div>
+		<div class="get_in_touch">
+			<a href="#contact" class="btn_outline">{{ home.contactText }}</a>
+		</div>
+	</section>
+	<section id="about" class="about">
+		<h3 class="title">{{ about.title }}</h3>
+		<div class="about_me_box">
+			<div class="about_me_desc">
+				<div>
+					{{ about.content|safe }}
+				</div>
+				<ul class="skills">
+					{% for skill in about.skills %}
+					<li><i class="icon-chevrons-right"></i> {{ skill.name }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="about_me_pic">
+				<!-- TODO add Avatar -->
+				<a href="https://github.com/dennohpeter"></a>
+			</div>
+		</div>
+	</section>
+	<section id="articles" class="articles">
+		<h3 class="title">Articles</h3>
+		<!-- TODO design article cards -->
+	</section>
+	<section id="projects" class="projects">
+		<h3 class="title">Some Things I've Built</h3>
+		<div>
+			{% for project in featured_projects %}
+			<div class="featured_card">
+				<div class="featured_description">
+					<h4 class="featured_project">Featured Project</h4>
+					<h5 class="project_name">{{ project.name }}</h5>
+					<div class="project_description">
+						<p>
+							{{ project.description }}
+						</p>
+					</div>
+					<ul class="tech_list">
+						{% for tech in project.tech %}
+						<li>{{ tech.name }}</li>
+						{% endfor %}
+					</ul>
+					<div class="sources">
+						<a href="{{ project.github }}"><i class="icon-github"></i></a>
+						<a href="{{ project.external_link }}"><i class="icon-external-link"></i></a>
+					</div>
+				</div>
+				<a href="{{ project.external_link }}" class="project_preview">
+					<div class="project_img_wrapper">
+						<div style="width: 100%; padding-bottom: 62.4688%;"></div>
+						<img src="assets/images/regular/{{ project.cover }}.png" alt="{{ project.name }}">
+						<picture>
+							<!-- <source type="image/webp" srcset="assets/images/9fca7/{{ project.cover }}.webp 175w,
+							assets/images/mobile/{{ project.cover }}.webp 350w,
+							assets/images/tablet-potrait/{{ project.cover }}.webp 700w,
+							assets/images/tablet-landscape/{{ project.cover }}.webp 1050w,
+							assets/images/regular/{{ project.cover }}.webp 1400w,
+							assets/images/very-large/{{ project.cover }}.webp 3200w" sizes="(max-width: 700px) 100vw, 700px"> -->
+							<!-- <source type="image/png" srcset="assets/images/20862/{{ project.cover }}.png 175w,
+							assets/images/mobile/{{ project.cover }}.png 350w,
+							assets/images/tablet-potrait/{{ project.cover }}.png 700w,
+							assets/images/tablet-landscape/{{ project.cover }}.png 1050w,
+							assets/images/regular/{{ project.cover }}.png 1400w,
+							assets/images/very-large/{{ project.cover }}.png 3200w" sizes="(max-width: 700px) 100vw, 700px"> -->
+							<img sizes="(max-width: 700px) 100vw, 700px" srcset="assets/images/20862/{{ project.cover }}.png 175w,
+							assets/images/mobile/{{ project.cover }}.png 350w,
+							assets/images/tablet-potrait/{{ project.cover }}.png 700w,
+							assets/images/tablet-landscape/{{ project.cover }}.png 1050w,
+							assets/images/regular/{{ project.cover }}.png 1400w,
+							assets/images/very-large/{{ project.cover }}.png 3200w"
+								src="assets/images/tablet-potrait/{{ project.cover }}.png" alt="{{ project.name }}"
+								
+								>
+						</picture>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+	<section class="other_projects">
+		<h4>Other Noteworthy Projects</h4>
+		<a href="/archive" class="the_archive">view the archive</a>
+		<div class="other_projects_wrapper">
+			<div class="projects_wrapper">
+				{% for project in other_projects %}
+				<div class="other_project_card">
+					<div class="card-inner">
+						<div>
+							<div class="card-header">
+								<div class="card-icon-left">
+									<a href=""><i class="icon-folder-open"></i></a>
+								</div>
+								<div class="card-icon-right">
+									<a href="{{ project.github }}" class="external-link" target="_blank"
+										rel="nofollow noopener noreferrer" aria-label="github"><i
+											class="icon-github"></i></a>
+									<a href="{{ project.external_link }}" class="external-link" target="_blank"
+										rel="nofollow noopener noreferrer" aria-label="external Link"><i
+											class="icon-external-link"></i></a>
+								</div>
+							</div>
+							<h5 class="other_project_name">{{ project.name }}</h5>
+							<div class="other-project-description">
+								<p>{{ project.description }}</p>
+							</div>
+						</div>
+						<div>
+							<ul class="tech_list">
+								{% for tech in project.tech %}
+								<li>{{ tech.name }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<button class="show_more">Show More</button>
+	</section>
+	<section id="contact" class="contact">
+		<h3>Make Me Super Happy?</h3>
+		<h4>{{ contact.title }}</h4>
+		<div>
+			<p>
+				{{ contact.content|safe }}
+			</p>
+		</div>
+		<a href="mailto:denispeterson96@gmail.com" rel="nofollow 
+        noreferrer noopener" class="btn_get_in_touch">Say Hello</a>
+	</section>
+</main>
+{% endblock %}
