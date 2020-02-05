@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="dennohpeter Logo" src="https://raw.githubusercontent.com/dennohpeter/portfolio/master/static/favicon/android-chrome-512x512.png" width="100">
+  <img alt="dennohpeter Logo" src="https://raw.githubusercontent.com/dennohpeter/portfolio/master/assets/favicon/android-chrome-512x512.png" width="100">
 </div>
 
 <h1 align="center">
