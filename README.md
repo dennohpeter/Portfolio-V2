@@ -15,39 +15,36 @@
 </a>
 </div>
 
-<div align="center">
-<img alt="dennohpeter preview" src="https://raw.githubusercontent.com/dennohpeter/Portfolio/master/assets/images/portfolio_preview.png">
-</div>
-
+![preview](https://raw.githubusercontent.com/dennohpeter/Portfolio/master/assets/images/preview.png)
 ## :hammer_and_wrench: Installation & Set Up
 
 1. Create a virtual environment
-<pre>
-python3 -m venv venv
-</pre>
+  ```sh
+  python3 -m venv venv
+  ```
 2. Update pip to the latest version
-<pre>
-pip install --upgrade pip
-</pre>
+  ```sh
+  pip install --upgrade pip
+```
 3. Install dependencies(requirements).
-<pre>
-pip install -r requirements.txt
-</pre>
+  ```sh
+  pip install -r requirements.txt
+  ```
 4. Start the development server
-<pre>
-statik --watch
-</pre>
+  ```sh
+  statik --watch
+```
 
 ## :rocket: Building and Running for Production
 
 1. Generate a full static production build
-<pre>
-statik
-</pre>
+  ```sh
+  statik
+  ```
 2. Preview the site as it will appear once deployed at
-<pre>
-cd public/
-</pre>
+  ```sh
+  cd public/
+  ```
 
 ## :pushpin: Note
 I've made my website open source for your inspiration, motivation, and curiosity.
