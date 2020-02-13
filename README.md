@@ -16,7 +16,7 @@
 </div>
 
 <div align="center">
-<img alt="dennohpeter preview" src="https://raw.githubusercontent.com/dennohpeter/Portfolio/master/assets/images/portfolio_preview.png" width="100">
+<img alt="dennohpeter preview" src="https://raw.githubusercontent.com/dennohpeter/Portfolio/master/assets/images/portfolio_preview.png">
 </div>
 
 ## :hammer_and_wrench: Installation & Set Up
