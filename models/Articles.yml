@@ -3,5 +3,5 @@ slug: String
 author: String
 summary: String
 published: DateTime
-tags: Tags[]
+tags: Skills[]
 content: Content

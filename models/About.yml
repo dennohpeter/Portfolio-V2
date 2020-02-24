@@ -1,4 +1,4 @@
 title: String
 avatar: String
-skills: Tags[]
+skills: Skills[]
 content: Content

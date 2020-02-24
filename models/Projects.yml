@@ -1,9 +1,9 @@
-date: DateTime
+published: DateTime
 name: String
-github:  String
+github: String
 external-link: String
-tech: Tags[]
-cover: String
+tech: Skills[]
+cover: Gallery[]
 featured: Boolean
 showInProjects: Boolean
 description: Content
