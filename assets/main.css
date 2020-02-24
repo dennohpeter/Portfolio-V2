@@ -859,6 +859,11 @@ main {
 	border-radius: 3px;
 }
 
+.project_img_wrapper:hover, .project_img_wrapper:focus {
+	filter: none !important;
+	mix-blend-mode: unset;
+}
+
 .project_img_wrapper img {
 	position: absolute;
 	top: 0px;
