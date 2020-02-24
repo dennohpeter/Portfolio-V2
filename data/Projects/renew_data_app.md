@@ -1,19 +1,22 @@
 ---
-date: '2020-02-03'
-name: 'Renew Data App'
-github: ''
-external-link: 'https://renewdata.com'
+published: 2020-02-03
+name: Renew Data App
+github: https://github.com/dennohpeter/renewdata
+external-link: ''
 tech: 
 
     - java
     - android
 
-cover: renew_data
+cover:
+
+    - renew_data
+
 featured: true
 showInProjects: true
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit.
- Recusandae, sunt quae? Esse dolores earum delectus mollitia labore soluta saepe.
-Obcaecati qui tempora doloribus minima accusamus sunt amet architecto reiciendis ab.
+This is the mobile application that saves you time, data bundles and the 
+process of manually keeping track of the time you are supposed to renew your 
+data bundles.
 
