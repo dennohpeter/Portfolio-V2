@@ -1,161 +1,190 @@
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image"
+      content="https://pbs.twimg.com/profile_images/978285309145354241/2qsyGFTA_400x400.jpg"
+      />
+    <title>{% block title %}{{ page_title }} {% endblock %}</title>
+    <link rel="canonical" href="{{ website }}" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ author }} - Full Stack Developer |
+      Python | Linux Nerd" />
+    <meta property="og:description" content="I'm {{ author }}, Fullstack
+      Developer.This is my personal website." />
+    <meta name="author" content="{{ author }}">
+    <meta name="copyright" content='&copy;{{ author }} 2018-2020'>
+    <meta property="og:url" content="{{ website }}" />
+    <meta property="og:site_name" content="{{ author }}| Full Stack Developer |
+      Linux Nerd" />
+    <meta name="robots" content="noodp">
+    <meta name="description" content="I'm {{ author }}, Fullstack
+      Developer.This is my personal website." />
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:image" content="https://pbs.twimg.com/profile_images/978285309145354241/2qsyGFTA_400x400.jpg" />
-	<title>{% block title %}{{ page_title }} {% endblock %}</title>
-	<link rel="canonical" href="https://www.dennohpeter.com/" />
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Dennis Peterson - Full Stack Developer | Python | Linux Nerd" />
-	<meta property="og:description" content="I'm Dennis Peterson, Fullstack Developer.This is my personal website." />
-	<meta name="author" content="Dennis Peterson">
-	<meta name="copyright" content='© Dennis Peterson 2018-2020'>
-	<meta property="og:url" content="https://www.dennohpeter.com/" />
-	<meta property="og:site_name" content="Full Stack Developer | Python | Linux Nerd" />
-	<meta name="robots" content="noodp">
-	<meta name="description" content="I'm Dennis Peterson, Fullstack Developer.This is my personal website." />
+    <link rel="apple-touch-icon" sizes="180x180"
+      href="{% asset 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="{% asset 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16"
+      href="{% asset 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% asset 'favicon/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% asset 'favicon/safari-pinned-tab.svg' %}"
+      color="#2d292b">
+    <link rel="shortcut icon" href="{% asset 'favicon/favicon.ico' %}">
+    <meta name="apple-mobile-web-app-title" content="{{ author }}">'
+    <meta name="application-name" content="{{ author }}">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="msapplication-config"
+      content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="{% asset 'main.css' %}">
+  </head>
 
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-	<link rel="manifest" href="assets/favicon/site.webmanifest">
-	<link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#2d292b">
-	<link rel="shortcut icon" href="assets/favicon/favicon.ico">
-	<meta name="apple-mobile-web-app-title" content="Dennis Peterson">
-	<meta name="application-name" content="Dennis Peterson">
-	<meta name="msapplication-TileColor" content="#b91d47">
-	<meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
-	<link rel="stylesheet" type="text/css" href="assets/main.css">
-</head>
+  <body>
+    <noscript id="noscript">This app works best with JavaScript enabled.</noscript>
+    <div class="root">
+      <div class="container">
+        <header>
+          <nav class="desktop-nav">
+            <div class="brand">
+              <a href="/">
+                <img src="{% asset 'avatar.svg' %}" alt="avatar">
+              </a>
+            </div>
+            <div class="menu">
+              <div class="menu-inner">
+                <div class="icon-menu"></div>
+              </div>
+            </div>
+            <div class="nav-wrapper">
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+              <div>
+                <a href="{% asset 'resume.pdf' %}" class="btn_outline"
+                  rel="nofollow
+                  noopener noreferrer"
+                  target="_blank">Resume</a>
+              </div>
+            </div>
+          </nav>
+          <div class="mobile-menu">
+            <aside>
+              <nav class="mobile-nav">
+                <ul>
+                  <li><a href="#about" class="mobile-link">About</a></li>
+                  <li><a href="#articles" class="mobile-link">Articles</a></li>
+                  <li><a href="#projects" class="mobile-link">Projects</a></li>
+                  <li><a href="#contact" class="mobile-link">Contact</a></li>
+                </ul>
+                <a href="{% asset 'resume.pdf' %}" class="mobile-resume"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer">Resume</a>
+              </nav>
+            </aside>
 
-<body>
-	<noscript id="noscript">This app works best with JavaScript enabled.</noscript>
-	<div class="root">
-		<div class="container">
-			<header>
-				<nav class="desktop-nav">
-					<div class="brand">
-						<a href="#">
-							<img src="https://daks2k3a4ib2z.cloudfront.net/53a9a7630dfd86dd31d6fdb4/53de0b634a9366157770dbb7_icon-intro.svg"
-								alt="Dennis">
-						</a>
-					</div>
-					<div class="menu">
-						<div class="menu-inner">
-							<div class="icon-menu"></div>
-						</div>
-					</div>
-					<div class="nav-wrapper">
-						<ul>
-							<li><a href="#about">About</a></li>
-							<li><a href="#articles">Articles</a></li>
-							<li><a href="#projects">Projects</a></li>
-							<li><a href="#contact">Contact</a></li>
-						</ul>
-						<div>
-							<a href="assets/resume.pdf" class="btn_outline" rel="nofollow noopener noreferrer"
-								target="_blank">Resume</a>
-						</div>
-					</div>
-				</nav>
-				<div class="mobile-menu">
-					<aside>
-						<nav class="mobile-nav">
-							<ul>
-								<li><a href="#about" class="mobile-link">About</a></li>
-								<li><a href="#articles" class="mobile-link">Articles</a></li>
-								<li><a href="#projects" class="mobile-link">Projects</a></li>
-								<li><a href="#contact" class="mobile-link">Contact</a></li>
-							</ul>
-							<a href="assets/resume.pdf" class="mobile-resume" target="_blank"
-								rel="nofollow noopener noreferrer">Resume</a>
-						</nav>
-					</aside>
-
-				</div>
-			</header>
-			<div class="social-left" orientation="left">
-				<ul>
-					<li>
-						<a href="https://github.com/dennohpeter" target="_blank" title="Gitlab"
-							rel="nofollow noopener noreferrer">
-							<i class="icon-gitlab"></i></a>
-					</li>
-					<li>
-						<a href="" target="_blank" title="Codewars" rel="nofollow noopener noreferrer"><i
-								class="icon-issues"></i></a></li>
-					<li>
-						<a href="https://devpost.com/dennohpeter" target="_blank" title="Devpost"
-							rel="nofollow noopener noreferrer"><i class="icon-devpost"></i></a>
-					</li>
-					<li>
-						<a href="https://twitter.com/dennohpeter" target="_blank" title="Twitter"
-							rel="nofollow noopener noreferrer"><i class="icon-twitter"></i></a>
-					</li>
-					<li>
-						<a href="https://twitter.com/dennohpeter" target="_blank" title="Donate"
-							rel="nofollow noopener noreferrer"><i class="icon-gift"></i></a>
-					</li>
-				</ul>
-			</div>
-			<div class="social-right" orientation="right">
-				<ul>
-					<li>
-						<a href="https://github.com/dennohpeter" target="_blank" title="Github"
-							rel="nofollow noopener noreferrer">
-							<i class="icon-github"></i></a>
-					</li>
-					<a href="https://devpost.com/dennohpeter" target="_blank" title="Devpost"
-						rel="nofollow noopener noreferrer"><i class="icon-devpost"></i></a>
-					</li>
-					<li>
-						<a href="https://twitter.com/dennohpeter" target="_blank" title="Twitter"
-							rel="nofollow noopener noreferrer"><i class="icon-twitter"></i></a>
-					</li>
-					<li>
-						<a href="https://twitter.com/dennohpeter" target="_blank" title="Donate"
-							rel="nofollow noopener noreferrer"><i class="icon-gift"></i></a>
-					</li>
-				</ul>
-			</div>
-			<div class="content">
-				{% block body %} {% endblock %}
-				<footer>
-					<div class="footer_social">
-						<ul>
-							<li>
-								<a href="https://github.com/dennohpeter" target="_blank" title="Github"
-									rel="nofollow noopener noreferrer"><i class="icon-github"></i></a></li>
-							<li>
-								<a href=""><i class="icon-chat" target="_blank" title="Github"
-										rel="nofollow noopener noreferrer"></i></a></li>
-							<li>
-								<a href=""><i class="icon-chat" target="_blank" title="Github"
-										rel="nofollow noopener noreferrer"></i></a></li>
-							<li>
-								<a href="https://devpost.com/dennohpeter" target="_blank" title="Github"
-									rel="nofollow noopener noreferrer"><i class="icon-devpost"></i></a></li>
-							<li>
-								<a href="https://twitter.com/dennohpeter" target="_blank" title="Github"
-									rel="nofollow noopener noreferrer"><i class="icon-twitter"></i></a></li>
-						</ul>
-					</div>
-					<div class="footer_meta">
-						<a href="https://github.com/bchiang7/v4" target="_blank" rel="nofollow noopener noreferrer">
-							<div>Design credit goes to Brittany Chiang.</div>
-						</a>
-					</div>
-				</footer>
-			</div>
-		</div>
-	</div>
-	<!-- js -->
-	<script src="assets/main.js"></script>
-</body>
+          </div>
+        </header>
+        <div class="social-left" orientation="left">
+          <ul>
+            <li>
+              <a href="{{ gitlab }}" target="_blank"
+                title="Gitlab" rel="nofollow noopener noreferrer">
+                <i class="icon-gitlab"></i></a>
+            </li>
+            <li>
+              <a href="{{ stackoverflow }}" target="_blank"
+                title="Stack Overflow"
+                rel="nofollow noopener noreferrer"><i
+                  class="icon-stackoverflow"></i></a>
+            </li>
+            <li>
+              <a href="{{ codewars }}" target="_blank" title="Codewars"
+                rel="nofollow noopener
+                noreferrer"><i
+                  class="icon-issues"></i></a></li>
+            <li>
+              <a href="{{ devpost }}" target="_blank"
+                title="Devpost"
+                rel="nofollow noopener noreferrer"><i class="icon-devpost"></i></a>
+            </li>
+            <li>
+              <a href="{{ donate }}" target="_blank"
+                title="Donate"
+                rel="nofollow noopener noreferrer"><i class="icon-gift"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="social-right" orientation="right">
+          <ul>
+            <li>
+              <a href="{{ github }}" target="_blank"
+                title="Github" rel="nofollow noopener noreferrer">
+                <i class="icon-github"></i></a>
+            </li>
+            <li>
+              <a href="{{ stackoverflow }}" target="_blank"
+                title="Stack Overflow"
+                rel="nofollow noopener noreferrer">
+                <i class="icon-stackoverflow"></i></a>
+            </li>
+            <li>
+              <a href="{{ twitter }}" target="_blank"
+                title="Twitter"
+                rel="nofollow noopener noreferrer"><i class="icon-twitter"></i></a>
+            </li>
+            <li>
+              <a href="{{ donate }}" target="_blank"
+                title="Donate"
+                rel="nofollow noopener noreferrer"><i class="icon-gift"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          {% block body %} {% endblock %}
+          <footer>
+            <div class="footer_social">
+              <ul>
+                <li>
+                  <a href="{{ github }}" target="_blank"
+                    title="Github"
+                    rel="nofollow noopener noreferrer"><i class="icon-github"></i></a></li>
+                <li>
+                  <a href="{{ gitlab }}"><i class="icon-gitlab" target="_blank"
+                      title="Gitlab"
+                      rel="nofollow noopener noreferrer"></i></a></li>
+                <li>
+                  <a href="{{ stackoverflow }}"><i class="icon-stackoverflow"
+                      target="_blank" title="Stack Overflow"
+                      rel="nofollow noopener noreferrer"></i></a></li>
+                <li>
+                  <a href="{{ devpost }}" target="_blank"
+                    title="Devpost"
+                    rel="nofollow noopener noreferrer"><i class="icon-devpost"></i></a></li>
+                <li>
+                  <a href="{{ twitter }}" target="_blank"
+                    title="Github"
+                    rel="nofollow noopener noreferrer"><i class="icon-twitter"></i></a></li>
+              </ul>
+            </div>
+            <div class="footer_meta">
+              <a href="https://github.com/bchiang7/v4" target="_blank"
+                rel="nofollow noopener noreferrer">
+                <div>Design credit goes to Brittany Chiang.</div>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- js -->
+    <script src="{% asset 'main.js' %}"></script>
+  </body>
 
 </html>
