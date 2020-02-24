@@ -1,5 +1,6 @@
 ---
-title: 'Get In Touch'
+title: Make Me Super Happy?
+subtitle: Get In Touch
 ---
 
 I'm currently looking for freelance opportunities, my inbox is always open.
