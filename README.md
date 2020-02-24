@@ -53,7 +53,7 @@ However, this theme is highly customized and personally tailored, and it would t
 The [Statik Simple Walkthrough](https://github.com/thanethomson/statik/wiki/Walkthrough) is a great place to start, and is the base for this portfolio.
 
 ## :skull: Features
-* Posts and pages in Markdown(Md)
+* Posts and pages in Markdown(**Md**)
 * Tags and categories
 
 ## :electric_plug: Contributing
