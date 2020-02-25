@@ -25,7 +25,7 @@
             <i class="icon-chevrons-right"></i> {{ skill.name }}
           </li>
           {% else %}
-          {{ placeholder(title) }}
+          {{ util.placeholder(title) }}
           {% endfor %}
         </ul>
       </div>
@@ -35,11 +35,6 @@
       </div>
     </div>
   </section>
-  {% macro placeholder(section_title) -%}
-  <p>
-    {{ section_title | capitalize }} will appear here
-  </p>
-  {%- endmacro %}
   <section id="articles" class="articles">
     <h3 class="title">Articles</h3>
     <!-- TODO design article cards -->
@@ -47,7 +42,7 @@
     {% for article in articles %}
 
     {% else %}
-    {{ placeholder('Articles') }}
+    {{ util.placeholder('Articles') }}
     {% endfor %}
 
   </section>
@@ -112,7 +107,7 @@
         </a>
       </div>
       {% else %}
-      {{ placeholder('Featured Projects') }}
+      {{ util.placeholder('Featured Projects') }}
       {% endfor %}
     </div>
   </section>
@@ -165,7 +160,7 @@
           </div>
         </div>
         {% else %}
-        {{ placeholder('Other Projects') }}
+        {{ util.placeholder('Other Projects') }}
         {% endfor %}
       </div>
     </div>
