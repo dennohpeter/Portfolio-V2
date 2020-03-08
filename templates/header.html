@@ -1,0 +1,44 @@
+<header class="navbar">
+    <nav class="desktop-nav">
+        <div class="brand">
+            <a href="/">
+                <img src="{% asset 'avatar.svg' %}" alt="avatar">
+            </a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner">
+                <div class="icon-menu"></div>
+            </div>
+        </div>
+        <div class="nav-wrapper">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div>
+                <a href="{% asset 'resume.pdf' %}" class="btn_outline"
+                    rel="nofollow
+                    noopener noreferrer"
+                    target="_blank">Resume</a>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <aside>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="#about" class="mobile-link">About</a></li>
+                    <li><a href="#articles" class="mobile-link">Articles</a></li>
+                    <li><a href="#projects" class="mobile-link">Projects</a></li>
+                    <li><a href="#contact" class="mobile-link">Contact</a></li>
+                </ul>
+                <a href="{% asset 'resume.pdf' %}" class="mobile-resume"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer">Resume</a>
+            </nav>
+        </aside>
+
+    </div>
+</header>
