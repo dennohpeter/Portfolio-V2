@@ -16,60 +16,92 @@
 </div>
 
 ![preview](https://raw.githubusercontent.com/dennohpeter/Portfolio/master/assets/images/preview.png)
+
 ## :hammer_and_wrench: Installation & Set Up
 
 1. Create a virtual environment
-  ```sh
+
+  
+
+``` sh
   python3 -m venv venv
   ```
+
 2. Update pip to the latest version
-  ```sh
+
+  
+
+``` sh
   pip install --upgrade pip
 ```
+
 3. Install dependencies(requirements).
-  ```sh
+
+  
+
+``` sh
   pip install -r requirements.txt
   ```
+
 4. Start the development server
-  ```sh
+
+  
+
+``` sh
   statik --watch
 ```
 
 ## :rocket: Building and Running for Production
 
 1. Generate a full static production build
-  ```sh
+
+  
+
+``` sh
   statik
   ```
+
 2. Preview the site as it will appear once deployed at
-  ```sh
+
+  
+
+``` sh
   cd public/
   ```
 
 ## :pushpin: Note
+
 I've made my website open source for your inspiration, motivation, and curiosity.
-However, this theme is highly customized and personally tailored, and it would take more work to remove all my custom code than create your own. **I encourage you to be creative and create your own theme, design, and content**.
+However, this theme is highly customized and personally tailored, and it would take more work to remove all my custom code than create your own.**I encourage you to be creative and create your own theme, design, and content**.
 
 The [Statik Simple Walkthrough](https://github.com/thanethomson/statik/wiki/Walkthrough) is a great place to start, and is the base for this portfolio.
 
 ## :skull: Features
+
 * Posts and pages in Markdown(**Md**)
-* Tags and categories
+* Tagging and categories
+* Fully responsive
+* SEO optimized (Twitter Card, JSON-LD, RSS and sitemap)
+* Highly optimized (Lighthouse score ~400)
+* Theming
 
 ## :electric_plug: Contributing
+
 If you see any typos or formatting errors in a post, or any other issue that needs to be addressed, please do not hesitate to open a pull request and fix it!
 
 ## :page_with_curl: Acknowledgements
+
 1. Thane Thompson [@thanethomson](https://github.com/thanethomson) - Statik
 2. Tania Rascia [@taniarascia](https://github.com/taniarascia) - Readme format, and her special articles.
 3. Brittany Chiang [@bchiang7](https://github.com/bchiang7) - Portfolio Design Inspiration
 
 ## :neckbeard: Author
-1. [Dennis Peterson](https://dennohpeter.com)
+
+1.[Dennis Peterson](https://dennohpeter.com)
 
 ## :rotating_light: LICENCE
+
 I value keeping this site open source, but as you all know, **plagiarism is bad**. I spent a non-negligible amount of effort developing, designing, and trying to perfect this website, and I am proud of it! All I ask is to not claim this effort as yours.
 
 So, feel free to fork this repo. If you do, please just give me proper credit by linking back to my website, https://dennohpeter.com. Refer to this handy [quora post](https://www.quora.com/Is-it-bad-to-copy-other-peoples-code) if you're not sure what to do. Thanks!
-
 
