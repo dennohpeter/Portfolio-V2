@@ -37,13 +37,48 @@
   </section>
   <section id="articles" class="articles">
     <h3 class="title">Articles</h3>
-    <!-- TODO design article cards -->
-
-    {% for article in articles %}
-
-    {% else %}
-    {{ util.placeholder('Articles') }}
-    {% endfor %}
+    <div class="articles_slider">
+      {% for article in articles %}
+      <article class="article_post">
+        <a class="post-card"
+          href="{{ article.slug }}/">
+          <div class="post-card_feature-image"
+            style="background-image:url(https://ghost.nehalist.io/content/images/2020/02/full-circle.png)"></div><header
+            class="post-card_header">
+            <div class="post-card_meta">
+              <span class="post-card_tag">Blog</span>
+              <span class="post-card_date">{{ article.published }}</span>
+            </div>
+            <h2 class="post-card_title">{{ article.title }}</h2>
+          </header>
+          <section class="post-card_excerpt">
+            My latest blog update is fairly small - but required a shitload of
+            work. Not because it's so fancy, but because I went for a serious
+            case of over-engineering.
+          </section>
+          <footer class="post-card_footer">
+            <img
+              src="https://ghost.nehalist.io/content/images/2019/06/me-lg.jpg"
+              class="post-card_profile-image" alt="{{ article.author }}">
+            {{ article.author }}
+          </footer>
+        </a>
+      </article>
+      {% else %}
+      {{ util.placeholder('Articles') }}
+      {% endfor %}
+    </div>
+    <div class="nav-controls">
+       <button role="presentation" class="prev"></button>
+       <button role="presentation" class="next"></button>
+    </div>
+          <div class="nav-dots">
+        {% for index in articles %}
+        <button role="button" class="nav-dot">
+          <span></span>
+        </button>
+        {% endfor %}
+      </div>
 
   </section>
   <section id="projects" class="projects">

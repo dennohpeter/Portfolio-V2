@@ -1,7 +1,7 @@
 title: String 
 slug: String
 author: String
-summary: String
+excerpt: String
 published: DateTime
 tags: Skills[]
 content: Content

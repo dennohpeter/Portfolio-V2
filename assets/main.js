@@ -32,27 +32,27 @@ const menu = () => {
 
 }
 
-const navbar = () => {
+const controlsbar = () => {
     const header = document.querySelector(".container>header");
     let lastScrollTop = 0;
-    let navHeight = 0;
+    let controlsHeight = 0;
 
     window.addEventListener("scroll", function (event) {
         let fromTop = window.pageYOffset || document.documentElement.scrollTop;
         // downscroll code
         if (fromTop > lastScrollTop) {
             header.classList.add('scroll');
-            navHeight = header.offsetHeight;
+            controlsHeight = header.offsetHeight;
 
 
-            if (fromTop > navHeight) {
+            if (fromTop > controlsHeight) {
                 header.classList.add("scrollAnim");
             }
 
         }
         // upscroll code
         else {
-            if (fromTop < navHeight) {
+            if (fromTop < controlsHeight) {
                 header.classList.remove('scroll');
                 header.classList.remove('scrollAnim');
             }
@@ -67,5 +67,43 @@ const navbar = () => {
     }, false);
 
 }
-navbar();
+const slider = () => tns({
+    container: '.articles_slider',
+    gutter: 10,
+    speed: 800,
+    slideBy: 'page',
+    mouseDrag: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    controlsPosition: 'bottom',
+    controlsContainer: '.nav-controls',
+    controlsText: ['<', '>'],
+    navPosition: 'bottom',
+    navContainer: '.nav-dots',
+    responsive: {
+        0: {
+            items: 1,
+            controls: false
+        },
+        767: {
+            items: 2,
+            controls: true
+        },
+        992: {
+            items: 3,
+            controls: true
+        },
+        1200: {
+            items: 3,
+            controls: true
+        },
+        1500: {
+            items: 5,
+            controls: true
+        }
+    }
+});
+
 menu();
+controlsbar();
+slider()
