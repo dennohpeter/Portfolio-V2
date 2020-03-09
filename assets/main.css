@@ -1636,12 +1636,6 @@ main {
 	}
 }
 
-@media (max-width: 48em) {
-	.home {
-		padding-top: 150px;
-	}
-}
-
 @media (max-width: 62.5em) {
 	.short-intro {
 		font-size: 14px;
