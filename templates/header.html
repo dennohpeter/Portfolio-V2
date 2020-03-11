@@ -12,16 +12,26 @@
         </div>
         <div class="nav-wrapper">
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#articles">Articles</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="{% url 'index' %}#about">About</a>
+                </li>
+                <li>
+                    <a href="{% url 'blog' %}">Micro-Blog</a>
+                </li>
+                <li>
+                    <a href="{% url 'index' %}#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="{% url 'index' %}#contact">Contact</a>
+                </li>
             </ul>
             <div>
                 <a href="{% asset 'resume.pdf' %}" class="btn_outline"
                     rel="nofollow
-                    noopener noreferrer"
-                    target="_blank">Resume</a>
+                    noopener noreferrer" target="_blank">Resume</a>
             </div>
         </div>
     </nav>
@@ -29,10 +39,22 @@
         <aside>
             <nav class="mobile-nav">
                 <ul>
-                    <li><a href="#about" class="mobile-link">About</a></li>
-                    <li><a href="#articles" class="mobile-link">Articles</a></li>
-                    <li><a href="#projects" class="mobile-link">Projects</a></li>
-                    <li><a href="#contact" class="mobile-link">Contact</a></li>
+                    <li>
+                        <a href="/" class="mobile-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'index' %}#about" class="mobile-link">About</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'blog' %}" class="mobile-link">Micro-Blog</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'index' %}#projects"
+                            class="mobile-link">Projects</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'index' %}#contact" class="mobile-link">Contact</a>
+                    </li>
                 </ul>
                 <a href="{% asset 'resume.pdf' %}" class="mobile-resume"
                     target="_blank"
