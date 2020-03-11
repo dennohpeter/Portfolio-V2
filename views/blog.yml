@@ -1,0 +1,7 @@
+path: /blog/
+template: blog/index
+context:
+  static:
+    page-title: "Micro Blog | Dennis Peterson"
+  dynamic:
+    articles: session.query(Articles).all()

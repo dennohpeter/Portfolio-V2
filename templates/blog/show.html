@@ -1,0 +1,635 @@
+{% extends 'base.html' %}
+{% block css_extra%}
+<link rel="stylesheet"
+    type="text/css" href="{% asset 'blog.css' %}">
+{% endblock %}
+{% block body %}
+<main class="single-post">
+    <div class="reading-progress
+        reading-progress--tag-blog" style="width: 100%;"></div>
+    <div class="post">
+        <div class="post__sidebar-left">
+            <button class="post__toggle-toc-button" role="button"
+                aria-label="Toggle table of contents">
+                <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 84V44c0-8.837
+                        7.163-16 16-16h416c8.837 0 16 7.163 16 16v40c0
+                        8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16zm16
+                        144h416c8.837 0 16-7.163
+                        16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16
+                        16v40c0 8.837 7.163 16 16 16zm0 256h416c8.837 0 16-7.163
+                        16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16
+                        16v40c0 8.837 7.163 16 16 16zm0-128h416c8.837 0 16-7.163
+                        16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16
+                        16v40c0 8.837 7.163 16 16 16z"></path>
+                </svg>
+            </button>
+            <div class="post__toc">
+                <nav class="toc">
+                    <ol class="toc-list">
+                        <li class="toc-list__item">
+                            <a href="#the-initial-plan" class="toc-list__link
+                                node-name--H2">
+                                The
+                                initial
+                                plan
+                            </a>
+                        </li>
+                        <li class="toc-list__item">
+                            <a href="#a-new-backend-or-not-"
+                                class="toc-list__link node-name--H2">
+                                A new
+                                backend... or not!
+                            </a>
+                        </li>
+                        <li class="toc-list__item">
+                            <a href="#new-styles-or-not-" class="toc-list__link
+                                node-name--H2">
+                                New
+                                styles... or not!
+                            </a>
+                        </li>
+                        <li class="toc-list__item">
+                            <a href="#farewell-caraway" class="toc-list__link
+                                node-name--H2">
+                                Farewell,
+                                Caraway
+                            </a>
+                        </li>
+                        <li class="toc-list__item">
+                            <a href="#a-new-search" class="toc-list__link
+                                node-name--H2">A new search</a>
+                        </li>
+                        <li class="toc-list__item">
+                            <a href="#design-updates" class="toc-list__link
+                                node-name--H2">
+                                Design
+                                updates
+                            </a>
+                        </li>
+                        <li class="toc-list__item
+                            is-active-li">
+                            <a href="#lessons-learned" class="toc-list__link
+                                node-name--H2
+                                toc-list__link--active">Lessons learned</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="post__content">
+            <header class="post__header">
+                <div class="post__header-meta">
+                    <a href="/tag/blog">Blog</a>
+                    <div>
+                        03
+                        February, 2020
+                    </div>
+                </div>
+                <h1 class="post__title">
+                    The
+                    full circle update
+                </h1>
+            </header>
+            <div class="post__feature-image">
+                <img
+                    src="https://ghost.nehalist.io/content/images/2020/02/full-circle.png"
+                    alt="The full circle update">
+            </div>
+            <section class="post__html">
+                <p>
+                    Have you ever thought about updating some
+                    minor things about your project and ended up in pretty much
+                    re-inventing the wheel? Just some little tweaks here and
+                    there, nothing special. Shouldn't take more than a few days.
+                    I somehow managed to walk this way and went from
+                    <em>
+                        "just
+                        some tweaks here and there!"
+                    </em> for my blog to
+                    <em>
+                        "I
+                        will update pretty much the entire universe!"
+                    </em>
+                    within just a few blinks. I'm not entirely sure what
+                    happened here - but let me try to explain what happened...
+                    or what
+                    <em>not</em> happened.
+                </p>
+                <h2 id="the-initial-plan">
+                    The
+                    initial plan
+                </h2>
+                <p>
+                    Since the release of my Gatsby site I
+                    wanted to polish a few things. Things like overhauling the
+                    sidebar which took way to much space for way to little
+                    information, re-position the tags since I've always felt
+                    like they were kinda lost at the bottom of the front page
+                    and many other things like that.
+                </p>
+                <p>
+                    Ultimately it
+                    shouldn't be a huge update but still required some work.
+                </p>
+                <p>
+                    But side projects can be deceptive. There's no project
+                    manager, no budget, nothing which stops you from
+                    <em>blanately</em>
+                    forgetting all the requirements,
+                    <em>blindly</em>
+                    disregarding the concept of time and
+                    <em>pretty much</em>
+                    wasting your life. That's the good thing about side projects
+                    to a certain degree - but often causes more harm than good
+                    in the longsight.
+                </p>
+                <h2 id="a-new-backend-or-not-">
+                    A new
+                    backend... or not!
+                </h2>
+                <!--kg-card-begin: image-->
+                <figure class="kg-card kg-image-card kg-card-hascaption">
+                    <img
+                        src="https://ghost.nehalist.io/content/images/2020/02/hub.png"
+                        class="kg-image">
+                    <figcaption>Moments before ditching it</figcaption>
+                </figure>
+                <!--kg-card-end: image-->
+                <p>
+                    Even
+                    though I've complaint
+                    <a
+                        href="https://nehalist.io/why-i-dont-like-the-ghost-blogging-platform-anymore/">
+                        a
+                        lot
+                    </a>
+                    about Ghost I'm still using it to this very day.
+                    Before anyone grabs his pitchfork to haunt this hypocrisy
+                    let me briefly explain why;
+                </p>
+                <p>
+                    Ghost (or at least how it
+                    renders posts) is heavily integrated in the entire system
+                    which powers my blog. I started using Ghost many years ago
+                    and it has become an essential part of my blogging system
+                    which is why it's really hard to replace. Furthermore, I
+                    still like the editor it provides - and since I can defeat a
+                    lot of its quirks by using Gatsby I'm okay with that until
+                    I've found that some decent replacement which is worth it.
+                </p>
+                <p>
+                    But
+                    "worth it" is easier said than done, because I haven't found
+                    a system which I'd enjoy so much that I'd take the pain of
+                    replacing Ghost. Understandibly I don't want to spend weeks
+                    for being disappointed or even annoyed by it afterwards.
+                </p>
+                <p>
+                    I'm
+                    not saying that some CMS out there aren't good (
+                    <a
+                        href="https://nehalist.io/why-im-not-the-biggest-wordpress-fan">
+                        no,
+                        not you WordPress
+                    </a>
+                    ) - it's just that I can be a very
+                    picky guy with a pretty good idea of what he wants from his
+                    blogging engine.
+                </p>
+                <p>
+                    So the answer to "what systems would
+                    replace Ghost in my case" is simple: a custom solution. And
+                    that's exactly what I went for.
+                </p>
+                <p>
+                    Looking back at this
+                    point I don't know why I thought this would be doable in a
+                    reasonable amount of time, but I guess I just wanted to
+                    create yet another side project to let it die a few days
+                    later. But at least I had fun these days (and tried out
+                    <a href="https://materializecss.com/">Materialize</a>
+                    which
+                    is really cool).
+                </p>
+                <p>
+                    After some days of putting a serious
+                    amount of work into this thing I realized: this is not going
+                    to be done anytime soon. I've got other projects which would
+                    benefit the world more than a more convenient of managing my
+                    blog content.
+                </p>
+                <p>
+                    To prevent shipping a half-hearted
+                    solution which would end up in a post where I blame myself
+                    for creating it and how much I'd like to replace it by
+                    something
+                    <em>better</em>
+                    I simply abandoned the project and
+                    will stay with Ghost for the next time.
+                </p>
+                <p>
+                    It's obvious
+                    that I definitely should go for a custom solution - but
+                    that's nothing I can create within a few days. Pretty
+                    obvious in retrospect.
+                </p>
+                <h2 id="new-styles-or-not-">
+                    New
+                    styles... or not!
+                </h2>
+                <p>I really enjoy working with
+                    <a href="https://styled-components.com/">styled-components</a>
+                    .
+                    I enjoy it so much that I wanted to completely overhaul my
+                    entire CSS of my blog by replacing the current SASS solution
+                    with styled-components.
+                </p>
+                <p>
+                    Half way through rewriting
+                    components in styled-components I asked myself:
+                    <em>
+                        why the
+                        fuck am I doing this?
+                    </em>
+                </p>
+                <p>
+                    I didn't find an
+                    answer. The only thing I could think of was "engineering for
+                    engineering's sake" - but that's a very poor choice when it
+                    comes to a private blog which source code is not even
+                    publicly available.
+                    <em>
+                        Who'd admire the beauty of weeks of
+                        work which would do absolutely nothing regarding the
+                        readers experience?!
+                    </em>
+                </p>
+                <p>
+                    End of the story was a
+                    git checkout back to master, pick some things I really
+                    wanted (and rewrote them to SASS, because
+                    <em>fuck me</em>
+                    )
+                    and move on to the next feature.
+                </p>
+                <h2 id="farewell-caraway">Farewell, Caraway</h2>
+                <!--kg-card-begin: image-->
+                <figure class="kg-card kg-image-card">
+                    <img
+                        src="https://media.giphy.com/media/x6FdZZgXksZHy/giphy.gif"
+                        class="kg-image" alt="Best Friends Goodbye GIF">
+                </figure>
+                <!--kg-card-end: image-->
+                <p>
+                    With
+                    this update I've switched from using my own custom solution,
+                    <a href="https://github.com/nehalist/carraway">Carraway</a>
+                    ,
+                    for managing subscriptions and contact form submissions to
+                    other SaaS. As of now I'm using the
+                    <a
+                        href="https://www.gatsbyjs.org/packages/gatsby-plugin-mailchimp/">gatsby-plugin-mailchimp</a>
+                    for managing newsletter subscriptions and
+                    <a href="https://getform.io/">getform.io</a>
+                    for contact
+                    form submissions.
+                </p>
+                <p>
+                    The major reason for this change was
+                    to reduce maintenance on my side. My blog alone consists of
+                    multiple systems of which some are solely maintained by
+                    myself - reducing the amount of systems I need to take care
+                    of is always greatly appreciated.
+                </p>
+                <p>
+                    With this Carraway
+                    is no longer needed and will no longer be maintained by
+                    myself.
+                    <em>Farewell!</em>
+                </p>
+                <h2 id="a-new-search">
+                    A new
+                    search
+                </h2>
+                <p>
+                    One of the features which has made it to the
+                    final version is the new search powered by
+                    <a href="http://algolia.com/">Algolia</a>
+                    . My initial
+                    draft
+                    of the search was some serious monstrosity; did you know
+                    that every time you've visited my site you downloaded the
+                    entire index of all my posts and all the fancy search stuff
+                    was happening in your browser? Yep. I'm that kind of evil. I
+                    prefer having you to download a 190 kb file instead of
+                    implementing a real search.
+                </p>
+                <p>
+                    But, let's be real here: I
+                    hated this search implementation from the beginning. I just
+                    wanted to release the update back then, and simply doing it
+                    this way was the
+                    <em>safest</em> way in my opinion.
+                </p>
+                <p>
+                    Safest,
+                    you ask? Algolia is a
+                    <a href="https://www.algolia.com/pricing/">
+                        SaaS and charges
+                        money
+                    </a>
+                    at a certain point of operations and records.
+                    Back then I had no idea if I'd reach this limits with my
+                    blog (and, honestly, I still don't know) - but I've found
+                    some interesting thing:
+                    <a href="https://www.algolia.com/for-open-source/">
+                        Algolia
+                        for Open Source
+                    </a>
+                    . AOS makes it possible for open
+                    source projects to get increased limits as long as you
+                    fulfill their requirements and add a "Search by Algolia"
+                    logo to your search.
+                </p>
+                <p>
+                    A blog is not really what you'd
+                    think of when thinking of open source - but I've got a
+                    software blog with lots of free guides and maintain some
+                    open source projects.
+                    <em>Maybe</em> that's enough?
+                </p>
+                <p>
+                    Using
+                    my dear "let's just ask" attitude I did exactly that: I just
+                    filled out the application form and hoped for the best.
+                </p>
+                <p>
+                    After
+                    some days I got a response which told me that I'm accepted
+                    for AOS and that Algolia will increase my limits
+                    <strong>if</strong>
+                    necessary -
+                    <em>wohoo!</em>
+                </p>
+                <p>
+                    I'm still on the free plan
+                    but if my blog reaches its limit I can just write them again
+                    and they'll increase the limits (to something like 200k
+                    operations and 100k records if I remember correctly).
+                    <em>
+                        Talk
+                        about cool folks!
+                    </em>
+                </p>
+                <h2 id="design-updates">
+                    Design
+                    updates
+                </h2>
+                <p>
+                    As you may have seen the feed has been
+                    unified throughout the entire blog and slightly re-designed.
+                    This was actually one of the few things I didn't think of
+                    completely over-engineering.
+                    <em>Thank you, brain.</em>
+                </p>
+                <h2 id="lessons-learned">Lessons learned</h2>
+                <p>
+                    It's fairly
+                    obvious that I've spent an insane amount of time for a
+                    fairly simple update this time. Not because the technology
+                    failed. Not because some other dude is to blame. But because
+                    I just straight ran into the path of over-engineering
+                    without realizing.
+                </p>
+                <p>
+                    Usually I do have a pretty detailed
+                    list of requirements I want to do when starting to work on a
+                    project, but for blog updates I prefer(ed!) a more agile
+                    approach. With having a rough idea of what the update should
+                    be like I just start to work on and if I stumble upon
+                    something I consider important I just go for it.
+                </p>
+                <p>
+                    That
+                    was a pretty retarded thing to do.
+                </p>
+                <p>
+                    I've learned my
+                    lessons: write requirements for
+                    <em>everything</em>.
+                </p>
+            </section>
+            <footer class="post__footer">
+                <p>Published under
+                    <span>
+                        <a href="/tag/blog">Blog</a>
+                    </span>
+                    on
+                    <!-- -->
+                    03
+                    February, 2020
+                    <!-- -->.
+                </p>
+                Latest update on
+                <!-- -->
+                15
+                February, 2020
+                <!-- -->
+                .
+            </footer>
+        </div>
+        <div class="post__sidebar-right">
+            <div class="post__sidebar-right-content">
+                <!-- <div id="carbon-post">
+                    <script
+                        async=""
+                        id="_carbonads_js"
+                        type="text/javascript"
+                        src="//cdn.carbonads.com/carbon.js?serve=CK7IC23E&amp;placement=nehalistio"></script>
+                </div> -->
+                <div class="post__related-posts">
+                    <h3 class="post__related-title">
+                        You
+                        may also like
+                    </h3>
+                    <a class="post-card
+                        post-card--in-sidebar"
+                        href="/no-more-disqus-hello-commento/">
+                        <div class="post-card__feature-image"
+                            style="background-image:url(https://ghost.nehalist.io/content/images/2019/08/commento.png)"></div>
+                        <header class="post-card__header">
+                            <div class="post-card__meta">
+                                <span class="post-card__date">30 August, 2019</span>
+                            </div>
+                            <h2 class="post-card__title">
+                                No more Disqus; Hello
+                                Commento!
+                            </h2>
+                        </header>
+                        <section class="post-card__excerpt">
+                            I've finally
+                            switched
+                            from the Disqus commenting system to a self hosted
+                            Commento. Let's take a look at why I've ditched
+                            Disqus and decided for Commento.
+                        </section>
+                    </a>
+                    <a class="post-card post-card--in-sidebar"
+                        href="/software-development-blogging-analytics-revenue-content-and-more/">
+                        <div class="post-card__feature-image"
+                            style="background-image:url(https://ghost.nehalist.io/content/images/2019/08/blogging.png)"></div>
+                        <header class="post-card__header">
+                            <div class="post-card__meta">
+                                <span class="post-card__date">20 August, 2019</span>
+                            </div>
+                            <h2 class="post-card__title">
+                                Software development
+                                blogging: analytics, revenue, content and more
+                            </h2>
+                        </header>
+                        <section class="post-card__excerpt">
+                            Detailed insights
+                            about
+                            how my programming blog performs, how much money it
+                            generates and how I prefer to create content.
+                        </section>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-addition">
+        <div class="post-addition__container">
+            <div class="post-addition__subscribe">
+                <div class="subscribe">
+                    <div class="subscribe__box">
+                        <h2 class="subscribe__title">
+                            Liked
+                            this post?
+                        </h2>
+                        <p class="subscribe__description">
+                            Glad
+                            to hear that! Get the next one delivered right to
+                            your inbox.
+                        </p>
+                        <div class="subscribe__form">
+                            <label for="mail" class="sr-only">Mail</label>
+                            <input
+                                type="mail"
+                                id="mail"
+                                class="subscribe__input"
+                                placeholder="Your email">
+                            <button
+                                type="button"
+                                class="subscribe__submit"
+                                disabled=""
+                                role="button"
+                                aria-label="Get new posts per
+                                mail">Get new posts per mail</button>
+                        </div>
+                        <p class="subscribe__hint">
+                            <em>
+                                Free. No spam.
+                                Unsubscribe whenever you want.
+                            </em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="post-addition__about">
+                <div class="about-box">
+                    <img
+                        src="https://ghost.nehalist.io/content/images/2019/06/me-lg.jpg"
+                        class="about-box__avatar" alt="Kevin">
+                    <h3 class="about-box__author-name">Kevin</h3>
+                    <p>
+                        I make
+                        stuff. Mostly functional, occasionally shiny, stuff.
+                    </p>
+                    <ul class="about-box__social">
+                        <li class="about-box__social-item">
+                            <a
+                                class="about-box__social-link"
+                                rel="noopener"
+                                aria-label="@nehalist"
+                                target="_blank"
+                                href="https://nehalist.io">nehalist.io</a>
+                        </li>
+                        <li class="about-box__social-item">
+                            <a
+                                class="about-box__social-link"
+                                rel="noopener"
+                                aria-label="@nehalist"
+                                target="_blank"
+                                href="https://twitter.com/@nehalist">@nehalist</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comments">
+        <div class="comments__sidebar-left"></div>
+        <div class="comments__content">
+            <div id="commento" class="commento-root
+                commento-root-font">
+                <div id="commento-login-box-container"></div>
+                <div id="commento-error" class="commento-error-box"
+                    style="display: none;"></div>
+                <div id="commento-mod-tools" class="commento-mod-tools"
+                    style="display: none">
+                    <button id="commento-mod-tools-lock-button">Lock Thread</button>
+                </div>
+                <div id="commento-main-area" class="commento-main-area"
+                    style="">
+                    <div id="commento-login" class="commento-login">
+                        <div class="commento-login-text">Login</div>
+                    </div>
+                    <div id="commento-textarea-super-container-root"
+                        class="commento-button-margin">
+                        <div id="commento-textarea-container-root"
+                            class="commento-textarea-container">
+                            <textarea id="commento-textarea-root"
+                                placeholder="Add a
+                                comment"></textarea>
+                        </div>
+                        <button id="commento-submit-button-root"
+                            class="commento-button commento-submit-button">
+                            Add
+                            Comment
+                        </button>
+                        <a id="commento-markdown-button-root"
+                            class="commento-markdown-button">
+                            <b>
+                                M
+                                ↓
+                            </b>
+                            &nbsp;
+                            Markdown
+                        </a>
+                    </div>
+                    <div id="commento-pre-comments-area"></div>
+                    <div id="commento-comments-area" class="commento-comments"></div>
+                </div>
+                <div id="commento-footer" class="commento-footer">
+                    <div class="commento-logo-container">
+                        <a class="commento-logo" href="https://commento.io"
+                            target="_blank">
+                            <span class="commento-logo-text">Commento</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comments__sidebar-right"></div>
+    </div>
+</main>
+{% endblock %}
