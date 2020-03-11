@@ -40,78 +40,16 @@
       content="assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <!-- CSS STYLES -->
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
-    <link rel="stylesheet" type="text/css" href="{% asset 'main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% asset 'base.css' %}">
+    {% block css_extra%} {% endblock %}
   </head>
   <body>
     <noscript id="noscript">This app works best with JavaScript enabled.</noscript>
-    <div class="root">
-      <div class="container">
-        {% include 'header.html' %}
-        <div class="social-left" orientation="left">
-          <ul>
-            <li>
-              <a href="{{ gitlab }}" target="_blank"
-                title="Gitlab" rel="nofollow noopener noreferrer">
-                <i class="icon-gitlab"></i></a>
-            </li>
-            <li>
-              <a href="{{ stackoverflow }}" target="_blank"
-                title="Stack Overflow"
-                rel="nofollow noopener noreferrer"><i
-                  class="icon-stackoverflow"></i></a>
-            </li>
-            <li>
-              <a href="{{ codewars }}" target="_blank" title="Codewars"
-                rel="nofollow noopener
-                noreferrer"><i
-                  class="icon-issues"></i></a></li>
-            <li>
-              <a href="{{ devpost }}" target="_blank"
-                title="Devpost"
-                rel="nofollow noopener noreferrer"><i class="icon-devpost"></i></a>
-            </li>
-            <li>
-              <a href="{{ donate }}" target="_blank"
-                title="Donate"
-                rel="nofollow noopener noreferrer"><i class="icon-gift"></i></a>
-            </li>
-          </ul>
-        </div>
-        <div class="social-right" orientation="right">
-          <ul>
-            <li>
-              <a href="{{ github }}" target="_blank"
-                title="Github" rel="nofollow noopener noreferrer">
-                <i class="icon-github"></i></a>
-            </li>
-            <li>
-              <a href="{{ stackoverflow }}" target="_blank"
-                title="Stack Overflow"
-                rel="nofollow noopener noreferrer">
-                <i class="icon-stackoverflow"></i></a>
-            </li>
-            <li>
-              <a href="{{ twitter }}" target="_blank"
-                title="Twitter"
-                rel="nofollow noopener noreferrer"><i class="icon-twitter"></i></a>
-            </li>
-            <li>
-              <a href="{{ donate }}" target="_blank"
-                title="Donate"
-                rel="nofollow noopener noreferrer"><i class="icon-gift"></i></a>
-            </li>
-          </ul>
-        </div>
-        {% import 'utils.html' as util %}
-        {% block body %} {% endblock %}
-        {% include 'footer.html' %}
-      </div>
-    </div>
-    <!-- js -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    {% include 'header.html' %}
+    {% import 'utils.html' as util %}
+    {% block body %} {% endblock %}
+    {% include 'footer.html' %}
+    <!-- JS -->
     <script src="{% asset 'main.js' %}"></script>
   </body>
 
