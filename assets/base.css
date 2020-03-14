@@ -296,7 +296,7 @@ header.scrollAnim {
 	background-color: rgb(100, 255, 218);
 	position: absolute;
 	left: auto;
-	right: 0px;
+	right: 1px;
 	width: 30px;
 	height: 2px;
 	transition-timing-function: ease;

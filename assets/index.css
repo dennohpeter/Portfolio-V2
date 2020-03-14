@@ -125,17 +125,13 @@ main {
 	color: rgb(155, 166, 200);
 }
 
-.home div {
-	width: 100%;
-}
-
 .description {
 	margin-top: 25px;
 	width: 50%;
 	max-width: 500px;
 }
 
-.get_in_touch {
+.home div {
 	width: 100%;
 }
 
@@ -174,13 +170,13 @@ main {
 
 @media (max-width: 48em) {
 	.name {
-		font-size: 60px;
+		font-size: 55px;
 	}
 }
 
 @media (max-width: 30em) {
 	.name {
-		font-size: 50px;
+		font-size: 45px;
 	}
 }
 
