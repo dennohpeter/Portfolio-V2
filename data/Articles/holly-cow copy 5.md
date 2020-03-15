@@ -1,7 +1,7 @@
 ---
 title: 'Holly Cow'
 slug: 'holly-cow'
-author: 'dennohpeter'
+author: dennoh peter
 excerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
  Ipsam necessitatibus ipsum accusantium repellendus'
 published: 2020-02-03

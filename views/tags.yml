@@ -1,0 +1,5 @@
+path:
+  template: /tag/{{ tag.pk }}/
+  for-each:
+    tag: session.query(Tags).all()
+template: blog/show
