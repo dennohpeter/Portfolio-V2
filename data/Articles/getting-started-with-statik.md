@@ -1,14 +1,14 @@
 ---
-title: 'Holly Cow'
-slug: 'holly-cow'
+title: 'Getting started with statik'
+slug: 'getting-started-with-statik'
 author: dennoh peter
 excerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
  Ipsam necessitatibus ipsum accusantium repellendus'
-published: 2020-02-03
+published: 2020-03-20
 tags: 
 
-    - dummy
-    - cow
+    - statik
+    - python
 
 ---
 
