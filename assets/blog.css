@@ -209,14 +209,14 @@
      }
  }
 
- .toc-list {
-     margin: 0;
-     padding: 0;
- }
 
  .toc-list__item {
      line-height: 1.2em;
      padding-bottom: 10px;
+ }
+
+ .toc-list__item:last-child {
+     padding-bottom: 0;
  }
 
  .toc-list__link {

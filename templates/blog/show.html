@@ -114,51 +114,26 @@
                 </div> -->
                 <div class="post__related-posts">
                     <h3 class="post__related-title">
-                        You
-                        may also like
+                        You may also like
                     </h3>
+                    
                     <a class="post-card
                         post-card--in-sidebar"
-                        href="/no-more-disqus-hello-commento/">
+                        href="{% url 'article_details', article %}">
                         <div class="post-card__feature-image"
-                            style="background-image:url(https://ghost.nehalist.io/content/images/2019/08/commento.png)">
+                            style="background-image:url({% asset 'images/placeholder.png' %})">
                         </div>
                         <header class="post-card__header">
                             <div class="post-card__meta">
-                                <span class="post-card__date">30 August, 2019</span>
+                                <span class="post-card__date">
+                                    {{ article.published }}</span>
                             </div>
                             <h2 class="post-card__title">
-                                No more Disqus; Hello
-                                Commento!
+                                {{ article.title }}
                             </h2>
                         </header>
                         <section class="post-card__excerpt">
-                            I've finally
-                            switched
-                            from the Disqus commenting system to a self hosted
-                            Commento. Let's take a look at why I've ditched
-                            Disqus and decided for Commento.
-                        </section>
-                    </a>
-                    <a class="post-card post-card--in-sidebar"
-                        href="/software-development-blogging-analytics-revenue-content-and-more/">
-                        <div class="post-card__feature-image"
-                            style="background-image:url(https://ghost.nehalist.io/content/images/2019/08/blogging.png)">
-                        </div>
-                        <header class="post-card__header">
-                            <div class="post-card__meta">
-                                <span class="post-card__date">20 August, 2019</span>
-                            </div>
-                            <h2 class="post-card__title">
-                                Software development
-                                blogging: analytics, revenue, content and more
-                            </h2>
-                        </header>
-                        <section class="post-card__excerpt">
-                            Detailed insights
-                            about
-                            how my programming blog performs, how much money it
-                            generates and how I prefer to create content.
+                          {{ article.excerpt }}
                         </section>
                     </a>
                 </div>
