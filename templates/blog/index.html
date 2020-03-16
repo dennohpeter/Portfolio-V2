@@ -9,15 +9,14 @@
             <ul class="tag-list">
                 {% for tag in tags %}
                 <li class="tag-list__item">
-                    <a class="tag-list__link"
-                        href="/tags/">{{ tag.name }}</a>
+                    <a class="tag-list__link" href="/tags/">{{ tag.name }}</a>
                 </li>
                 {% endfor %}
             </ul>
         </div>
     </div>
     <div class="feed">
-        {% for article in articles %}            
+        {% for article in articles %}
         <article class="feed__post">
             <a class="post-card" href="{% url 'article_details', article %}">
                 <div class="post-card__feature-image"
@@ -33,16 +32,16 @@
                     {{ article.excerpt }}
                 </section>
                 <footer class="post-card__footer">
-                    <img
-                        src="{% asset 'favicon/android-chrome-512x512.png' %}"
-                        class="post-card__profile-image" alt="{{ article.author }}">{{ article.author }}
+                    <img src="{% asset 'favicon/android-chrome-512x512.png' %}" class="post-card__profile-image"
+                        alt="{{ article.author }}">{{ article.author }}
                 </footer>
             </a>
-        </article>            
+        </article>
+        {% else %}
+            <div>
+                <p>Articles will appear</p>
+            </div>
         {% endfor %}
-        <div class="feed__archive-link">
-            <a href="/archive">See more</a>
-        </div>
     </div>
 </div>
 {% endblock %}
