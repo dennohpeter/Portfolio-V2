@@ -23,61 +23,79 @@
 
 .icon-folder:before {
 	content: "\e90b";
-  }
-  .icon-theme:before {
+}
+
+.icon-theme:before {
 	content: "\e902";
-  }
-  .icon-codewars:before {
+}
+
+.icon-codewars:before {
 	content: "\e909";
-  }
-  .icon-issues:before {
+}
+
+.icon-issues:before {
 	content: "\e90c";
-  }
-  .icon-chevrons-right:before {
+}
+
+.icon-chevrons-right:before {
 	content: "\e900";
-  }
-  .icon-external-link:before {
+}
+
+.icon-external-link:before {
 	content: "\e901";
-  }
-  .icon-gitlab:before {
+}
+
+.icon-gitlab:before {
 	content: "\e906";
-  }
-  .icon-web:before {
+}
+
+.icon-web:before {
 	content: "\e912";
-  }
-  .icon-chat:before {
+}
+
+.icon-chat:before {
 	content: "\e913";
-  }
-  .icon-open-web:before {
+}
+
+.icon-open-web:before {
 	content: "\e914";
-  }
-  .icon-stack-overflow:before {
+}
+
+.icon-stack-overflow:before {
 	content: "\e90a";
-  }
-  .icon-point-up:before {
+}
+
+.icon-point-up:before {
 	content: "\e907";
-  }
-  .icon-point_down:before {
+}
+
+.icon-point_down:before {
 	content: "\e915";
-  }
-  .icon-like:before {
+}
+
+.icon-like:before {
 	content: "\f087";
-  }
-  .icon-gift:before {
+}
+
+.icon-gift:before {
 	content: "\e903";
-  }
-  .icon-gift:before {
+}
+
+.icon-gift:before {
 	content: "\e903";
-  }
-  .icon-github:before {
+}
+
+.icon-github:before {
 	content: "\e904";
-  }
-  .icon-twitter:before {
+}
+
+.icon-twitter:before {
 	content: "\e908";
-  }
-  .icon-devpost:before {
+}
+
+.icon-devpost:before {
 	content: "\e911";
-  }
+}
 
 *, ::before, ::after {
 	box-sizing: border-box;
@@ -145,7 +163,7 @@ ul, ol {
 	align-items: center;
 	position: sticky;
 	top: 0;
-	background-color: #161a1a;
+	background-color: rgb(21, 22, 22);
 	z-index: 11;
 	width: 100%;
 	height: 70px;
@@ -375,7 +393,7 @@ header.scrollAnim {
 	-webkit-box-align: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: rgba(25, 32, 32, 0.99);
+	background-color: rgba(21, 22, 22, 0.98);
 	width: 50vw;
 	height: 100%;
 	position: relative;

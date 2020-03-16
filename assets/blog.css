@@ -144,14 +144,14 @@
      }
  }
 
- .about-blog__content, .about-intro, .about-me, .about-office__content, .comments, .contact__content, .container, .feed, .footer__content, .newsletter, .page, .post, .status, .subheader__content, .tag-archive, .tag-list-container, .tags {
+ .comments, .contact__content, .container, .feed, .footer__content, .newsletter, .page, .post, .status, .subheader__content, .tag-archive, .tag-list-container, .tags {
      margin: auto;
      width: 1260px;
-     padding: 0 20px;
+     padding: 0 15px;
  }
 
  @media (max-width: 1300px) {
-     .about-blog__content, .about-intro, .about-me, .about-office__content, .comments, .contact__content, .container, .feed, .footer__content, .newsletter, .page, .post, .status, .subheader__content, .tag-archive, .tag-list-container, .tags {
+     .comments, .contact__content, .container, .feed, .footer__content, .newsletter, .page, .post, .status, .subheader__content, .tag-archive, .tag-list-container, .tags {
          max-width: 100%;
      }
  }
@@ -191,7 +191,6 @@
          transition: opacity .25s;
      }
  }
-
 
  .toc-list__item {
      line-height: 1.2em;
