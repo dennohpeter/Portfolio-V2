@@ -1,4 +1,4 @@
- a:hover, a:focus {
+ .feed a:hover, .feed a:focus, .single-post a:hover, .single-post a:focus {
      color: #20232a;
  }
 
