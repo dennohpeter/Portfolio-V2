@@ -21,81 +21,78 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-folder:before {
-	content: "\e90b";
-}
-
-.icon-theme:before {
-	content: "\e902";
-}
-
-.icon-codewars:before {
+.icon-contact:before {
+	content: "\e917";
+  }
+  .icon-home:before {
+	content: "\e905";
+  }
+  .icon-projects:before {
+	content: "\e90f";
+  }
+  .icon-codewars:before {
 	content: "\e909";
-}
-
-.icon-issues:before {
+  }
+  .icon-issues:before {
 	content: "\e90c";
-}
-
-.icon-chevrons-right:before {
+  }
+  .icon-chevrons-right:before {
 	content: "\e900";
-}
-
-.icon-external-link:before {
+  }
+  .icon-external-link:before {
 	content: "\e901";
-}
-
-.icon-gitlab:before {
+  }
+  .icon-gitlab:before {
 	content: "\e906";
-}
-
-.icon-web:before {
+  }
+  .icon-web:before {
 	content: "\e912";
-}
-
-.icon-chat:before {
+  }
+  .icon-chat:before {
 	content: "\e913";
-}
-
-.icon-open-web:before {
+  }
+  .icon-open-web:before {
 	content: "\e914";
-}
-
-.icon-stack-overflow:before {
+  }
+  .icon-blog:before {
+	content: "\e90d";
+  }
+  .icon-folder:before {
+	content: "\e90b";
+  }
+  .icon-theme:before {
+	content: "\e902";
+  }
+  .icon-mail:before {
+	content: "\e910";
+  }
+  .icon-user:before {
+	content: "\e90e";
+  }
+  .icon-stack-overflow:before {
 	content: "\e90a";
-}
-
-.icon-point-up:before {
+  }
+  .icon-point-up:before {
 	content: "\e907";
-}
-
-.icon-point_down:before {
+  }
+  .icon-point_down:before {
 	content: "\e915";
-}
-
-.icon-like:before {
+  }
+  .icon-like:before {
 	content: "\f087";
-}
-
-.icon-gift:before {
+  }
+  .icon-gift:before {
 	content: "\e903";
-}
-
-.icon-gift:before {
-	content: "\e903";
-}
-
-.icon-github:before {
+  }
+  .icon-github:before {
 	content: "\e904";
-}
-
-.icon-twitter:before {
+  }
+  .icon-twitter:before {
 	content: "\e908";
-}
-
-.icon-devpost:before {
+  }
+  .icon-devpost:before {
 	content: "\e911";
-}
+  } 
 
 *, ::before, ::after {
 	box-sizing: border-box;
@@ -211,12 +208,12 @@ header.scrollAnim {
 	justify-content: space-between;
 	-webkit-box-align: center;
 	align-items: center;
-	position: relative;
 	width: 100%;
 	color: rgb(204, 214, 246);
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	counter-reset: item 0;
-	z-index: 12
+	z-index: 12;
+	padding: 0 15px;
 }
 
 .brand {
@@ -360,139 +357,92 @@ header.scrollAnim {
 
 /* Navbar Mobile */
 
-.mobile-menu {
-	position: fixed;
-	top: 0px;
-	bottom: 0px;
-	right: 0px;
+.navbar .mobile-menu {
 	width: 100%;
-	min-height: 100vh;
-	z-index: 10;
-	transform: translateX(100vw);
-	visibility: hidden;
-	display: none;
-	outline: 0px;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-}
-
-.mobile-menu.active {
-	transform: translateX(0vw);
-	visibility: visible;
-}
-
-@media (max-width: 48em) {
-	.mobile-menu {
-		display: block;
-	}
-}
-
-.mobile-menu aside {
-	display: flex;
-	-webkit-box-pack: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	align-items: center;
-	flex-direction: column;
-	background-color: rgba(21, 22, 22, 0.98);
-	width: 50vw;
-	height: 100%;
-	position: relative;
-	right: 0px;
-	margin-left: auto;
-	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
-	box-shadow: rgba(2, 12, 27, 0.7) -10px 0px 30px -15px;
-	padding: 50px;
-}
-
-@media (max-width: 37.5em) {
-	.mobile-menu aside {
-		padding: 25px;
-	}
-}
-
-@media (max-width: 30em) {
-	.mobile-menu aside {
-		width: 75vw;
-	}
-}
-
-@media (max-width: 20.625em) {
-	.mobile-menu aside {
-		padding: 10px;
-	}
-}
-
-.mobile-nav {
-	display: flex;
-	-webkit-box-pack: justify;
-	justify-content: space-between;
-	-webkit-box-align: center;
-	align-items: center;
-	width: 100%;
-	flex-direction: column;
+	position: absolute;
+	left: 100%;
+	opacity: 0;
+	margin-left: 0;
+	float: left;
+	overflow-y: hidden;
+	overflow-x: auto;
 	text-align: center;
-	color: rgb(204, 214, 246);
+	background-color: rgb(21, 22, 22);
+	height: 70px;
+	top: 70px;
+	margin-top: 0;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;  
+	display: flex;
+    justify-content: space-evenly;
 }
 
-.mobile-nav ul {
-	width: 100%;
-	padding: 0px;
-	margin: 0px;
+.navbar .mobile-menu.active {
+	left: 0;
+	opacity: 1;
 }
 
-.mobile-nav ul li {
-	position: relative;
-	font-size: 18px;
-	counter-increment: item 1;
-	margin: 0px auto 20px;
+.navbar .mobile-menu li a {
+	font-size: 22px;
+	color: rgb(168, 178, 209);
+	margin-left: 0 !important;
+	line-height: 70px;
+	height: 70px;
+	width: 16%;
 }
 
-.mobile-nav ul li::before {
+.navbar .mobile-menu li a i {
+	font-size: 27px;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.navbar .mobile-menu li a:hover i {
+	opacity: 0;
+}
+
+.navbar .mobile-menu li.active a, .navbar .mobile-menu li a:hover {
+	color: #08fdd8;
+}
+
+.navbar .mobile-menu li a:after {
+	content: '';
+	font-size: 9px;
+	letter-spacing: 2px;
+	position: absolute;
+	bottom: 0px;
 	display: block;
-	content: "0" counter(item) ".";
-	color: rgb(100, 255, 218);
-	font-size: 14px;
-	margin-bottom: 5px;
-}
-
-@media (max-width: 37.5em) {
-	.mobile-nav ul li {
-		font-size: 16px;
-		margin: 0px auto 10px;
-	}
-}
-
-@media (max-width: 20.625em) {
-	.mobile-nav ul li {
-		font-size: 13px;
-	}
-}
-
-.mobile-link {
-	display: inline-block;
-	position: relative;
 	width: 100%;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-	padding: 3px 20px 20px;
+	text-align: center;
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 }
 
-.mobile-resume {
-	color: rgb(100, 255, 218);
-	background-color: transparent;
-	font-size: 14px;
-	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
-	line-height: 1;
-	cursor: pointer;
-	width: max-content;
-	border-width: 1px;
-	border-style: solid;
-	border-color: rgb(100, 255, 218);
-	border-image: initial;
-	border-radius: 3px;
-	text-decoration: none;
-	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-	padding: 18px 50px;
-	margin: 10% auto 0px;
+/* onhover words */
+
+.navbar .mobile-menu li:nth-child(1) a:after {
+	content: 'HOME';
+}
+
+.navbar .mobile-menu li:nth-child(2) a:after {
+	content: 'ABOUT';
+}
+
+.navbar .mobile-menu li:nth-child(3) a:after {
+	content: 'PROJECTS';
+}
+
+.navbar .mobile-menu li:nth-child(4) a:after {
+	content: 'MICRO-BLOG';
+}
+
+.navbar .mobile-menu li:nth-child(5) a:after {
+	content: 'CONTACT';
+}
+
+.navbar .mobile-menu li a:hover:after {
+	opacity: 1;
 }
 
 /* Navbar */
