@@ -23,7 +23,11 @@
                     style="background-image:url({% asset 'images/placeholder.png' %})"></div>
                 <header class="post-card__header">
                     <div class="post-card__meta">
-                        <span class="post-card__tag">Blog</span>
+                        <span class="post-card__tag">
+                            {% for tag in article.tags %}
+                            <a href="{% url 'tags', tag %}" class="_tag"> {{ tag.name }} </a>
+                            {% endfor %}
+                        </span>
                         <span class="post-card__date">{{ article.published }}</span>
                     </div>
                     <h2 class="post-card__title">{{ article.title }}</h2>
@@ -38,9 +42,9 @@
             </a>
         </article>
         {% else %}
-            <div>
-                <p>Articles will appear</p>
-            </div>
+        <div>
+            <p>Articles will appear</p>
+        </div>
         {% endfor %}
     </div>
 </div>

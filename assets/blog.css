@@ -90,6 +90,10 @@
      font-size: .8em;
  }
 
+ .post-card__tag ._tag:not(:first-child) {
+     padding-left: 4px;
+ }
+
  .post-card__title {
      margin-top: 0;
      line-height: 1.2em;
