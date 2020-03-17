@@ -1,15 +1,11 @@
 body {
-	width: 100%;
-	height: 100%;
 	min-height: 100%;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 	background-color: #161A1A;
 	color: rgb(172, 177, 197);
 	line-height: 1.3;
-	font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
 	font-size: 20px;
-	margin: 0;
 }
 
 .root {

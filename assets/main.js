@@ -25,7 +25,6 @@ const menu = () => {
     // TODO handleKeyEvent
 
     function toggleMenu() {
-        body.classList.toggle('blur');
         mobile_menu.classList.toggle('active');
         icon_menu.classList.toggle('active');
     }

@@ -23,76 +23,99 @@
 
 .icon-contact:before {
 	content: "\e917";
-  }
-  .icon-home:before {
+}
+
+.icon-home:before {
 	content: "\e905";
-  }
-  .icon-projects:before {
+}
+
+.icon-projects:before {
 	content: "\e90f";
-  }
-  .icon-codewars:before {
+}
+
+.icon-codewars:before {
 	content: "\e909";
-  }
-  .icon-issues:before {
+}
+
+.icon-issues:before {
 	content: "\e90c";
-  }
-  .icon-chevrons-right:before {
+}
+
+.icon-chevrons-right:before {
 	content: "\e900";
-  }
-  .icon-external-link:before {
+}
+
+.icon-external-link:before {
 	content: "\e901";
-  }
-  .icon-gitlab:before {
+}
+
+.icon-gitlab:before {
 	content: "\e906";
-  }
-  .icon-web:before {
+}
+
+.icon-web:before {
 	content: "\e912";
-  }
-  .icon-chat:before {
+}
+
+.icon-chat:before {
 	content: "\e913";
-  }
-  .icon-open-web:before {
+}
+
+.icon-open-web:before {
 	content: "\e914";
-  }
-  .icon-blog:before {
+}
+
+.icon-blog:before {
 	content: "\e90d";
-  }
-  .icon-folder:before {
+}
+
+.icon-folder:before {
 	content: "\e90b";
-  }
-  .icon-theme:before {
+}
+
+.icon-theme:before {
 	content: "\e902";
-  }
-  .icon-mail:before {
+}
+
+.icon-mail:before {
 	content: "\e910";
-  }
-  .icon-user:before {
+}
+
+.icon-user:before {
 	content: "\e90e";
-  }
-  .icon-stack-overflow:before {
+}
+
+.icon-stack-overflow:before {
 	content: "\e90a";
-  }
-  .icon-point-up:before {
+}
+
+.icon-point-up:before {
 	content: "\e907";
-  }
-  .icon-point_down:before {
+}
+
+.icon-point_down:before {
 	content: "\e915";
-  }
-  .icon-like:before {
+}
+
+.icon-like:before {
 	content: "\f087";
-  }
-  .icon-gift:before {
+}
+
+.icon-gift:before {
 	content: "\e903";
-  }
-  .icon-github:before {
+}
+
+.icon-github:before {
 	content: "\e904";
-  }
-  .icon-twitter:before {
+}
+
+.icon-twitter:before {
 	content: "\e908";
-  }
-  .icon-devpost:before {
+}
+
+.icon-devpost:before {
 	content: "\e911";
-  } 
+}
 
 *, ::before, ::after {
 	box-sizing: border-box;
@@ -109,10 +132,6 @@ html {
 body {
 	background-color: #fafafa;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-body.blur {
-	overflow: hidden;
 }
 
 p {
@@ -372,14 +391,17 @@ header.scrollAnim {
 	top: 70px;
 	margin-top: 0;
 	-webkit-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;  
-	display: flex;
-    justify-content: space-evenly;
+	transition: all 0.3s ease-out;
+	display: none;
+	visibility: hidden;
+	justify-content: space-evenly;
 }
 
 .navbar .mobile-menu.active {
 	left: 0;
 	opacity: 1;
+	display: flex;
+	visibility: visible;
 }
 
 .navbar .mobile-menu li a {
@@ -447,15 +469,9 @@ header.scrollAnim {
 
 /* Navbar */
 
-@media (max-width: 62.5em) {
-	.navbar {
-		padding: 20px 40px;
-	}
-}
-
 @media (max-width: 48em) {
 	.navbar {
-		padding: 20px 25px;
+		padding: 20px 0px;
 	}
 }
 
