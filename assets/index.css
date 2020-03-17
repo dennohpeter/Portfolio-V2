@@ -521,7 +521,7 @@ main {
 	align-items: flex-start;
 	position: relative;
 	height: 100%;
-	background-color: rgb(23, 42, 69);
+	background-color: rgba(2, 12, 27, 0.5);
 	padding: 2rem 1.75rem;
 	border-radius: 3px;
 }

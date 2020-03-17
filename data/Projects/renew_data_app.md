@@ -12,7 +12,7 @@ cover:
 
     - renew_data
 
-featured: true
+featured: false
 showInProjects: true
 ---
 
