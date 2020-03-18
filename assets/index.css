@@ -38,6 +38,18 @@ a {
 	color: rgb(168, 178, 209);
 }
 
+@media (max-width: 62.5em) {
+	.social-left {
+		right: 25px;
+	}
+}
+
+@media (max-width: 48em) {
+	.social-left {
+		display: none;
+	}
+}
+
 .social-right {
 	width: 40px;
 	position: fixed;
@@ -46,6 +58,18 @@ a {
 	right: 40px;
 	z-index: 10;
 	color: rgb(168, 178, 209);
+}
+
+@media (max-width: 62.5em) {
+	.social-right {
+		right: 25px;
+	}
+}
+
+@media (max-width: 48em) {
+	.social-right {
+		display: none;
+	}
 }
 
 .social-left ul, .social-right ul {
@@ -97,7 +121,15 @@ main {
 	flex-direction: column;
 	align-items: flex-start;
 	min-height: 100vh;
-	padding: 80px 0;
+	margin: 0px auto;
+	padding: 80px 0px;
+}
+
+@media (max-width: 48em) {
+	.home {
+		padding: 30px 0;
+		justify-content: start;
+	}
 }
 
 .short-intro {
@@ -106,44 +138,6 @@ main {
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	font-weight: normal;
 	margin: 0px 0px 20px 3px;
-}
-
-.name {
-	font-size: 80px;
-	line-height: 1.1;
-	margin: 0px;
-	color: #f0f0f0;
-}
-
-.subtitle {
-	font-size: 80px;
-	line-height: 1.1;
-	color: rgb(155, 166, 200);
-}
-
-.description {
-	margin-top: 25px;
-	width: 50%;
-	max-width: 500px;
-}
-
-.home div {
-	width: 100%;
-}
-
-.get_in_touch .btn_outline {
-	display: inline-block;
-	font-size: 14px;
-	margin-top: 50px;
-	margin-left: 0px;
-	padding: 1.25rem 1.75rem;
-}
-
-@media (max-width: 48em) {
-	.home {
-		padding: 30px 0px;
-		justify-content: end;
-	}
 }
 
 @media (max-width: 62.5em) {
@@ -156,6 +150,13 @@ main {
 	.short-intro {
 		font-size: 13px;
 	}
+}
+
+.name {
+	font-size: 80px;
+	line-height: 1.1;
+	margin: 0px;
+	color: #f0f0f0;
 }
 
 @media (max-width: 62.5em) {
@@ -176,6 +177,12 @@ main {
 	}
 }
 
+.subtitle {
+	font-size: 80px;
+	line-height: 1.1;
+	color: rgb(155, 166, 200);
+}
+
 @media (max-width: 62.5em) {
 	.subtitle {
 		font-size: 70px;
@@ -191,6 +198,36 @@ main {
 @media (max-width: 30em) {
 	.subtitle {
 		font-size: 50px;
+	}
+}
+
+.description {
+	margin-top: 25px;
+	width: 50%;
+	max-width: 500px;
+}
+
+@media(max-width: 48em) {
+	.description {
+		margin-top: 10px;
+	}
+}
+
+.home div {
+	width: 100%;
+}
+
+.get_in_touch .btn_outline {
+	display: inline-block;
+	font-size: 14px;
+	margin-top: 50px;
+	margin-left: 0px;
+	padding: 1.25rem 1.75rem;
+}
+
+@media (max-width: 48em) {
+	.get_in_touch .btn_outline {
+		margin-top: 20px;
 	}
 }
 
@@ -453,7 +490,6 @@ main {
 	flex-direction: column;
 	align-items: flex-start;
 	margin: 0px auto;
-	padding: 150px 0px;
 }
 
 .other_projects h4 {
@@ -653,7 +689,6 @@ main {
 	color: rgb(8, 253, 216);
 	background-color: transparent;
 	font-size: 14px;
-	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 	line-height: 1;
 	margin-top: 50px;
 	border-width: 1px;
@@ -662,6 +697,12 @@ main {
 	border-image: initial;
 	border-radius: 3px;
 	padding: 1.25rem 1.75rem;
+}
+
+@media(max-width) {
+	.btn_get_in_touch {
+		margin-top: 30px;
+	}
 }
 
 /* Mobile Responsiveness */
@@ -689,34 +730,6 @@ main {
 @media (max-width: 30em) {
 	body {
 		font-size: 18px;
-	}
-}
-
-/* Social */
-
-@media (max-width: 62.5em) {
-	.social-left {
-		right: 25px;
-	}
-}
-
-@media (max-width: 48em) {
-	.social-left {
-		display: none;
-	}
-}
-
-/* mail */
-
-@media (max-width: 62.5em) {
-	.social-right {
-		right: 25px;
-	}
-}
-
-@media (max-width: 48em) {
-	.social-right {
-		display: none;
 	}
 }
 
