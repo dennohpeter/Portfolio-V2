@@ -1,18 +1,17 @@
 ---
-published: 2020-02-03
+published:  Feb 7, 2020
 name: Renew Data App
-github: https://github.com/dennohpeter/renewdata
+github: https://github.com/dennohpeter/RenewData
 external-link: ''
 tech: 
 
     - java
-    - android
 
 cover:
 
     - renew_data
 
-featured: false
+featured: true
 showInProjects: true
 ---
 

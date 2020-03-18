@@ -1,5 +1,5 @@
 ---
-published: 2020-02-03
+published: Jun 12, 2018
 name: Daily Tips
 github: https://github.com/dennohpeter/dailytips
 external-link: http://chancetips.herokuapp.com
@@ -16,7 +16,6 @@ cover:
 featured: true
 showInProjects: true
 ---
-
-This is a mobile application targeting gamblers(**wasee wa kuekelea**) that helps them bet wisely by providing them with a wide market of selection all in one website
-while saving them the manual process of looking for tips from different sources
+Daily Tips is a betting prediction website with the most accurate tips out there.
+It gets prediction tips from other sources such as [Zulubet](https://www.zulubet.com) and [StatArea](https://www.statarea.com) and then extracts for you the most highlighted games from both websites.
 
