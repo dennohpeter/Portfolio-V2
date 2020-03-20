@@ -282,9 +282,14 @@
 
  .page__content h2, .post__html h2 {
      border-top: 1px solid #ececec;
-     margin-top: 44px;
-     padding-top: 40px;
+     margin-top: 20px;
+     padding-top: 20px;
      line-height: 1.2;
+ }
+
+ .page__content ul, .post__html ul {
+     list-style-type: circle;
+     padding-left: 20px;
  }
 
  /* TODO determine if to retain the code below */
@@ -299,7 +304,6 @@
 
  .page__content a, .post__html a {
      color: #42566a;
-     border-bottom: 2px solid #42566a;
  }
 
  .page__content blockquote, .post__html blockquote {

@@ -2,6 +2,7 @@
 {% block css_extra%}
 <link rel="stylesheet" type="text/css" href="{% asset 'blog.css' %}">
 {% endblock %}
+{% set page_title = article.title %}
 {% block body %}
 <main class="single-post">
     <div class="reading-progress
