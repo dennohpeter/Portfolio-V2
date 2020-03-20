@@ -18,9 +18,12 @@
     <div class="feed">
         {% for article in articles %}
         <article class="feed__post">
-            <a class="post-card" href="{% url 'article_details', article %}">
-                <div class="post-card__feature-image"
-                    style="background-image:url({% asset 'images/' %}{{ article.cover[0].name }})"></div>
+            <div class="post-card">
+                <a href="{% url 'article_details', article %}">
+                    <div class="post-card__feature-image"
+                        style="background-image:url({% asset 'images/' %}{{ article.cover[0].name }})">
+                    </div>
+                </a>
                 <header class="post-card__header">
                     <div class="post-card__meta">
                         <span class="post-card__tag">
@@ -30,16 +33,21 @@
                         </span>
                         <span class="post-card__date">{{ article.published }}</span>
                     </div>
-                    <h2 class="post-card__title">{{ article.title }}</h2>
+                    <h2 class="post-card__title">
+                        <a href="{% url 'article_details', article %}"> {{ article.title }} </a>
+                    </h2>
                 </header>
-                <section class="post-card__excerpt">
-                    {{ article.excerpt }}
-                </section>
-                <footer class="post-card__footer">
-                    <img src="{% asset 'favicon/android-chrome-512x512.png' %}" class="post-card__profile-image"
-                        alt="{{ article.author }}">{{ article.author }}
-                </footer>
-            </a>
+                <a href="{% url 'article_details', article %}">
+                    <section class="post-card__excerpt">
+                        {{ article.excerpt }}
+                    </section>
+                    <footer class="post-card__footer">
+                        <img src="{% asset 'favicon/android-chrome-512x512.png' %}" class="post-card__profile-image"
+                            alt="{{ article.author }}">
+                        {{ article.author }}
+                    </footer>
+                </a>
+            </div>
         </article>
         {% else %}
         <div>
