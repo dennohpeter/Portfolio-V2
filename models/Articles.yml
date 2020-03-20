@@ -1,7 +1,9 @@
-title: String 
+title: String
 slug: String
 author: String
 excerpt: String
 published: DateTime
+last_update: DateTime
 tags: Skills[]
+cover: Gallery[]
 content: Content

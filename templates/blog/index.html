@@ -20,7 +20,7 @@
         <article class="feed__post">
             <a class="post-card" href="{% url 'article_details', article %}">
                 <div class="post-card__feature-image"
-                    style="background-image:url({% asset 'images/placeholder.png' %})"></div>
+                    style="background-image:url({% asset 'images/' %}{{ article.cover[0].name }})"></div>
                 <header class="post-card__header">
                     <div class="post-card__meta">
                         <span class="post-card__tag">
