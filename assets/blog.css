@@ -196,21 +196,21 @@
      }
  }
 
- .toc-list__item {
+ .toc ul li {
      line-height: 1.2em;
      padding-bottom: 10px;
  }
 
- .toc-list__item:last-child {
+ .toc ul li:last-child {
      padding-bottom: 0;
  }
 
- .toc-list__link {
+ .toc ul li a {
      color: grey;
      text-decoration: none;
  }
 
- .toc-list .toc-list {
+ .toc ul .toc ul {
      padding-left: 17px;
      padding-top: 10px;
  }

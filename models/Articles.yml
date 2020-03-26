@@ -6,4 +6,5 @@ published: DateTime
 last_update: DateTime
 tags: Skills[]
 cover: Gallery[]
+toc: Text
 content: Content
