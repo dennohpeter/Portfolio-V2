@@ -6,8 +6,8 @@
   name: Statik
 - pk: django
   name: Django
-- pk: ajax
-  name: Ajax
+- pk: popular
+  name: Popular
 - pk: software-design
   name: Design
 - pk: personal
