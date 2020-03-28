@@ -9,6 +9,7 @@
         reading-progress--tag-blog" style="width: 100%;"></div>
     <div class="post">
         <div class="post__sidebar-left">
+            <button class="post__toggle-toc-button" role="button" aria-label="Toggle table of contents"> </button>
             <div class="post__toc">
                 {{ article.toc }}
             </div>
@@ -75,3 +76,6 @@
     </div>
 </main>
 {% endblock %}
+{% block js_extra %}
+<script src="{% asset 'blog-details.js' %}"></script>
+{% endblock js_extra %}

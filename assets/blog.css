@@ -218,9 +218,43 @@
      text-decoration: none;
  }
 
+ .toc ul li a.active {
+     color: #404040;
+     font-weight: 700;
+ }
+
  .toc ul .toc ul {
      padding-left: 17px;
      padding-top: 10px;
+ }
+
+ .post__toc--show-mobile {
+     left: 0;
+     opacity: 1;
+ }
+
+ .post__toggle-toc-button {
+     display: flex;
+     justify-content: center;
+     position: fixed;
+     right: 20px;
+     bottom: 20px;
+     border-radius: 100%;
+     box-shadow: 0 0 3px rgba(0, 0, 0, .03), 0 3px 46px rgba(0, 0, 0, .1);
+     border: 0;
+     z-index: 5000;
+     width: 50px;
+     height: 50px;
+     background-color: #20232a;
+     color: #fff;
+     outline: none;
+     cursor: pointer;
+ }
+
+ @media (min-width: 768px) {
+     .post__toggle-toc-button {
+         display: none
+     }
  }
 
  /* post content */
