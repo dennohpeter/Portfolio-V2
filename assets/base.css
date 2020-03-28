@@ -467,6 +467,16 @@ header.scrollAnim {
 	opacity: 1;
 }
 
+/* general utils */
+
+.text-center {
+	text-align: center !important;
+}
+
+.empty {
+	display: none;
+}
+
 /* Navbar */
 
 @media (max-width: 48em) {
