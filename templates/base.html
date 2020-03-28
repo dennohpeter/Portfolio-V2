@@ -46,6 +46,7 @@
   {% include 'footer.html' %}
   <!-- JS -->
   <script src="{% asset 'main.js' %}"></script>
+  {% block js_extra %} {% endblock js_extra %}
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149632645-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];

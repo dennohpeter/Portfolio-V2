@@ -38,7 +38,7 @@
      padding: 20px;
  }
 
- .tag-list__link:active {
+ .tag-list__link.active {
      color: rgb(8, 253, 216);
  }
 
