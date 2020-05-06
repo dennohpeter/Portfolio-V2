@@ -568,11 +568,14 @@ main {
 	justify-content: space-between;
 	-webkit-box-align: center;
 	align-items: center;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .card-icon-left {
 	color: rgb(8, 253, 216);
+}
+.card-icon-left a {
+	top: -10px;
 }
 
 .card-icon-right {
@@ -711,19 +714,19 @@ main {
 
 @media (max-width: 62.5em) {
 	main {
-		padding: 0px 100px;
+		padding: 0px 50px;
 	}
 }
 
 @media (max-width: 48em) {
 	main {
-		padding: 0px 50px;
+		padding: 0px 25px;
 	}
 }
 
 @media (max-width: 30em) {
 	main {
-		padding: 0px 25px;
+		padding: 0px 10px;
 	}
 }
 
